@@ -1,0 +1,34 @@
+{
+	"name": "vanpattenmedia/vpmframe-wp",
+	"description": "Fast, opinionated WordPress scaffolding",
+	"type": "project",
+	"license": "BSD-3-Clause",
+	"config": {
+		"vendor-dir": "vendor/composer"
+	},
+	"authors": [
+		{
+			"name": "Chris Van Patten",
+			"email": "chris@vanpattenmedia.com"
+		}
+	],
+	"repositories": [
+		{
+			"type": "composer",
+			"url" : "https://wpackagist.org"
+		}
+	],
+	"require": {
+		"symfony/yaml": "~2.0",
+		"johnpbloch/wordpress": "^4.9",
+		"timber/timber": "^1.7"
+	},
+	"extra": {
+		"wordpress-install-dir": "public/wp",
+		"installer-paths": {
+			"public/content/plugins/{$name}":    ["type:wordpress-plugin"],
+			"public/content/mu-plugins/{$name}": ["type:wordpress-muplugin"],
+			"public/content/themes/{$name}":     ["type:wordpress-theme"]
+		}
+	}
+}

@@ -1,0 +1,37 @@
+# Project information
+name: tomodomoco
+repo: git://github.com/TomodomoCo/tomodomo-site.git
+
+# Deploy alerts
+alerts:
+  slack:
+    room:
+    hook:
+
+# Deployment stages
+stage:
+  dev:
+    ip: 10.1.1.17
+    ports:
+      ssh: 22
+    user: vagrant
+    restrict: false
+    domain: dev.tomodomo.co
+  staging:
+    ip: 0.0.0.0
+    ports:
+      ssh: 22
+    user: deploy
+    branch: master
+    restrict:
+      user: tomodomo
+      password: keepout
+    domain: staging.tomodomo.co
+  production:
+    ip: 0.0.0.0
+    ports:
+      ssh: 22
+    user: deploy
+    branch: master
+    restrict: false
+    domain: tomodomo.co
