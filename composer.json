@@ -19,6 +19,7 @@
 		}
 	],
 	"require": {
+    "php/php": "^7.1",
 		"symfony/yaml": "~2.0",
 		"johnpbloch/wordpress": "^4.9",
 		"timber/timber": "^1.7"

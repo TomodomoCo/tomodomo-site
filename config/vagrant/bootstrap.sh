@@ -24,7 +24,7 @@ Update
 
 # Install packages
 sudo apt-get install -y --force-yes apache2 mysql-server-5.6 git-core
-sudo apt-get install -y --force-yes php7.0-common php7.0-dev php7.0-json php7.0-opcache php7.0-cli libapache2-mod-php7.0 php7.0 php7.0-mysql php7.0-fpm php7.0-curl php7.0-gd php7.0-mcrypt php7.0-mbstring php7.0-bcmath php7.0-zip php7.0-xdebug
+sudo apt-get install -y --force-yes php7.1-common php7.1-dev php7.1-json php7.1-opcache php7.1-cli libapache2-mod-php7.1 php7.1 php7.1-mysql php7.1-fpm php7.1-curl php7.1-gd php7.1-mcrypt php7.1-mbstring php7.1-bcmath php7.1-zip php7.1-xdebug
 
 # Run updates again
 Update
@@ -35,7 +35,7 @@ sudo mkdir -p /home/vagrant/logs/apache
 sudo mkdir /home/vagrant/phpmyadmin
 
 # Apache/PHP config
-cat /home/vagrant/${APP_DOMAIN}/current/config/vagrant/php.ini > /etc/php/7.0/apache2/php.ini
+cat /home/vagrant/${APP_DOMAIN}/current/config/vagrant/php.ini > /etc/php/7.1/apache2/php.ini
 sudo a2enmod rewrite
 
 # Download and "install" phpMyAdmin
