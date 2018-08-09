@@ -24,6 +24,10 @@
     {
       "type": "vcs",
       "url": "https://github.com/tomodomoco/kaiso"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/tomodomoco/gutenberg-block-columns"
     }
 	],
 	"require": {
@@ -35,7 +39,7 @@
 		"wpackagist-plugin/wordpress-seo": "^7.7",
 		"wpackagist-plugin/co-authors-plus": "^3.3",
 		"tomodomoco/kaiso": "dev-master",
-		"tomodomo/block-columns": "*@dev"
+		"tomodomo/block-columns": "dev-master"
 	},
 	"extra": {
 		"wordpress-install-dir": "public/wp",

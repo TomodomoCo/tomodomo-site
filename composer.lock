@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "f0b3eb77e07330a0b85fe0fd866633fc",
+    "content-hash": "7a3de707fcb7fcb38f5f8e94ae087057",
     "packages": [
         {
             "name": "altorouter/altorouter",
@@ -915,12 +915,17 @@
         },
         {
             "name": "tomodomo/block-columns",
-            "version": "dev-dev",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/TomodomoCo/gutenberg-block-columns.git",
+                "reference": "e983b431473573ab00d688ca374339e59830bb73"
+            },
             "dist": {
-                "type": "path",
-                "url": "./app/plugins/tomodomo-block-columns",
-                "reference": "9d713162342c9af44480dc31bf582a07fe60f060",
-                "shasum": null
+                "type": "zip",
+                "url": "https://api.github.com/repos/TomodomoCo/gutenberg-block-columns/zipball/e983b431473573ab00d688ca374339e59830bb73",
+                "reference": "e983b431473573ab00d688ca374339e59830bb73",
+                "shasum": ""
             },
             "require": {
                 "php": "^7.0"
@@ -938,7 +943,12 @@
                     "email": "hello@tomodomo.co"
                 }
             ],
-            "description": "Variable-width columns block for Gutenberg"
+            "description": "Variable-width columns block for Gutenberg",
+            "support": {
+                "source": "https://github.com/TomodomoCo/gutenberg-block-columns/tree/master",
+                "issues": "https://github.com/TomodomoCo/gutenberg-block-columns/issues"
+            },
+            "time": "2018-08-09T15:47:35+00:00"
         },
         {
             "name": "tomodomoco/kaiso",

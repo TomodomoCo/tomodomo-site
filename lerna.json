@@ -1,0 +1,13 @@
+{
+  "version": "0.1.0",
+  "command": {
+    "bootstrap": {
+      "scope": "*"
+    }
+  },
+  "packages": [
+    "public/content/plugins/tomodomo-block-columns"
+  ],
+  "lerna": "2.11.0"
+}
+
