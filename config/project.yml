@@ -1,12 +1,15 @@
 # Project information
 name: tomodomoco
-repo: git://github.com/TomodomoCo/tomodomo-site.git
+repo: git://github.com/TomodomoCo/tomodomoco-site.git
+
+uploads:
+  - public/assets
 
 # Deploy alerts
 alerts:
   slack:
-    room:
-    hook:
+    channel: 'activity'
+    webhook: 'https://hooks.slack.com/services/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'
 
 # Deployment stages
 stage:
@@ -15,7 +18,6 @@ stage:
     ports:
       ssh: 22
     user: vagrant
-    restrict: false
     domain: dev.tomodomo.co
   staging:
     ip: 0.0.0.0
@@ -23,9 +25,6 @@ stage:
       ssh: 22
     user: deploy
     branch: master
-    restrict:
-      user: tomodomo
-      password: keepout
     domain: staging.tomodomo.co
   production:
     ip: 0.0.0.0
@@ -33,5 +32,4 @@ stage:
       ssh: 22
     user: deploy
     branch: master
-    restrict: false
     domain: tomodomo.co

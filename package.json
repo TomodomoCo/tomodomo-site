@@ -1,0 +1,30 @@
+{
+  "name": "mindful-site",
+  "devDependencies": {
+    "autoprefixer": "*",
+    "bower": "*",
+    "connect-modrewrite": "^0.10.1",
+    "gulp": "^3.9.0",
+    "gulp-concat": "*",
+    "gulp-connect": "*",
+    "gulp-cssnano": "*",
+    "gulp-imagemin": "*",
+    "gulp-sass": "^2.3.2",
+    "gulp-sass-glob": "^1.0.6",
+    "gulp-svg-sprite": "^1.4.0",
+    "gulp-svgo": "^1.5.4",
+    "gulp-twig": "^0.7.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-util": "*",
+    "lerna": "^2.11.0",
+    "main-bower-files": "*",
+    "node-sass-asset-functions": "0.*",
+    "s3": "*",
+    "twig-markdown": "*"
+  },
+  "scripts": {
+    "build": "npx gulp",
+    "dev": "npx gulp watch",
+    "postinstall": "npx bower install"
+  }
+}
