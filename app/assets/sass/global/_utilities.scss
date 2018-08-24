@@ -1,0 +1,128 @@
+/**
+ * margin-top
+ */
+.u-mt--0 {
+	margin-top: 0 !important;
+}
+
+.u-mt--s {
+	margin-top: $space;
+}
+
+.u-mt--sd,
+.u-mt--s2x {
+	margin-top: $space * 2;
+}
+
+.u-mt--s3x {
+	margin-top: $space * 3;
+}
+
+.u-mt--sh {
+	margin-top: $space * 0.5;
+}
+
+/**
+ * margin-bottom
+ */
+.u-mb--0 {
+	margin-bottom: 0 !important;
+}
+
+.u-mb--s {
+	margin-bottom: $space;
+}
+
+.u-mb--sd,
+.u-mb--s2x {
+	margin-bottom: $space * 2;
+}
+
+.u-mb--s3x {
+	margin-bottom: $space * 3;
+}
+
+.u-mb--sh {
+	margin-bottom: $space--half;
+}
+
+
+/**
+ * padding-top
+ */
+.u-pt--0 {
+	padding-top: 0 !important;
+}
+
+.u-pt--s {
+	padding-top: $space;
+}
+
+.u-pt--sd {
+	padding-top: $space--double;
+}
+
+.u-pt--sh {
+	padding-top: $space--half;
+}
+
+/**
+ * padding-bottom
+ */
+.u-pb--0 {
+	padding-bottom: 0 !important;
+}
+
+.u-pb--s {
+	padding-bottom: $space;
+}
+
+.u-pb--sd {
+	padding-bottom: $space--double;
+}
+
+.u-pb--sh {
+	padding-bottom: $space--half;
+}
+
+/**
+ * text-align
+ */
+.u-ta--l {
+	text-align: left !important;
+}
+
+.u-ta--c {
+	text-align: center !important;
+}
+
+.u-ta--r {
+	text-align: right !important;
+}
+
+/**
+ * misc
+ */
+.u-heading {
+	@extend %heading;
+}
+
+.u-w--100 {
+	width: 100% !important;
+}
+
+.u-jc--fe {
+	justify-content: flex-end !important;
+}
+
+.u-br {
+	border-radius: $border-radius;
+}
+
+.u--pull-right {
+	width: 100%;
+
+	float: right;
+	margin-right: calc( -50% - 1rem );
+	margin-left: $space;
+}

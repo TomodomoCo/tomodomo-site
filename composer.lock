@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "7a3de707fcb7fcb38f5f8e94ae087057",
+    "content-hash": "56979d3eabd56e295d1ea32bb30965d2",
     "packages": [
         {
             "name": "altorouter/altorouter",
@@ -951,17 +951,17 @@
             "time": "2018-08-09T15:47:35+00:00"
         },
         {
-            "name": "tomodomoco/kaiso",
+            "name": "tomodomo/kaiso",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TomodomoCo/kaiso.git",
-                "reference": "4ef8fab399b36e3e884f754b327344927d8b8edf"
+                "reference": "590320e70f24d653bfcfb6c174fd3809a415895b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TomodomoCo/kaiso/zipball/4ef8fab399b36e3e884f754b327344927d8b8edf",
-                "reference": "4ef8fab399b36e3e884f754b327344927d8b8edf",
+                "url": "https://api.github.com/repos/TomodomoCo/kaiso/zipball/590320e70f24d653bfcfb6c174fd3809a415895b",
+                "reference": "590320e70f24d653bfcfb6c174fd3809a415895b",
                 "shasum": ""
             },
             "require": {
@@ -970,10 +970,14 @@
                 "guzzlehttp/psr7": "^1.4",
                 "pimple/pimple": "^3.2"
             },
+            "require-dev": {
+                "squizlabs/php_codesniffer": "^3.3",
+                "vimeo/psalm": "^2.0"
+            },
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "TomodomoCo\\": [
+                    "Tomodomo\\": [
                         "src"
                     ]
                 }
@@ -992,7 +996,7 @@
                 "source": "https://github.com/TomodomoCo/kaiso/tree/master",
                 "issues": "https://github.com/TomodomoCo/kaiso/issues"
             },
-            "time": "2018-07-04T15:41:28+00:00"
+            "time": "2018-08-13T22:16:40+00:00"
         },
         {
             "name": "twig/twig",
@@ -1134,15 +1138,15 @@
         },
         {
             "name": "wpackagist-plugin/gutenberg",
-            "version": "3.4.0",
+            "version": "3.5.0",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/gutenberg/",
-                "reference": "tags/3.4.0"
+                "reference": "tags/3.5.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/gutenberg.3.4.0.zip",
+                "url": "https://downloads.wordpress.org/plugin/gutenberg.3.5.0.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -1177,7 +1181,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "tomodomoco/kaiso": 20,
+        "tomodomo/kaiso": 20,
         "tomodomo/block-columns": 20
     },
     "prefer-stable": false,

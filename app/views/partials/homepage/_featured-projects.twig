@@ -1,0 +1,53 @@
+{% embed 'partials/_page.twig' with {
+	id: "features",
+	classes: [
+		'page--padded',
+	]
+} %}
+	{% block content %}
+		<div class="row">
+			<div class="col col--full">
+				<h3 class="page__callout">We've helped publishers and communities like yours:</h3>
+			</div>
+		</div>
+
+		{% include 'partials/_features__item.twig' with {
+			logo: {
+				file: 'mindful.png',
+			},
+			image: 'mindful-1.png',
+			content: 'We worked with Mindful magazine to build a paywall and member area that generated thousands of new magazine subscriptions in just one month.
+
+[Read more →](/work/mindful30)',
+		} %}
+
+		{% include 'partials/_features__item.twig' with {
+			alt: true,
+			logo: {
+				type: 'svg',
+				file: 'freedompop',
+				width: 220
+			},
+			image: 'freedompop-1.png',
+			content: 'With a tight timeline, FreedomPop chose Tomodomo to execute the rapid build of a new multilingual theme for their customer support community.',
+		} %}
+
+		{% include 'partials/_features__item.twig' with {
+			logo: {
+				type: 'svg',
+				file: 'torrentfreak',
+				width: 60
+			},
+			image: 'torrentfreak-1.png',
+			content: 'Readers can research, rate, and review privacy software thanks to the directory we built for online privacy magazine TorrentFreak.
+
+[Read more →](/work/torrentfreak)',
+		} %}
+
+		<div class="row">
+			<div class="col col--full">
+				<a href="/work" class="page__cta"><span>See more of what we do →</span></a>
+			</div>
+		</div>
+	{% endblock %}
+{% endembed %}

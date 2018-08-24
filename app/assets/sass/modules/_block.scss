@@ -1,0 +1,37 @@
+.block {
+	background: white;
+	margin: -1rem;
+	overflow: hidden;
+	box-shadow: 0 5px 8px -8px rgba(black, 0.8);
+}
+
+	.block__image {
+		width: 100%;
+	}
+
+	.block__title,
+	.block__content,
+	.block__action {
+		padding: 0.7rem 1rem 0.8rem;
+
+		p:first-child {
+			margin-top: 0;
+		}
+
+		p:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.block__title {
+		padding-left: 0;
+		padding-right: 0;
+		margin-left: 1rem;
+		margin-right: 1rem;
+		border-bottom: 2px solid #DDD;
+	}
+
+	.block__action {
+		background: #555;
+		color: white;
+	}

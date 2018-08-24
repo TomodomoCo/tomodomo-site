@@ -1,0 +1,22 @@
+.hero {
+	background: hsl(24, 100%, 98%);
+	border-bottom: 4px solid hsl(24, 100%, 93%);
+}
+
+	.hero__content {
+	}
+
+	.hero__media {
+		display: flex;
+		justify-content: flex-end;
+		position: relative;
+		bottom: -4px;
+
+		@include breakpoint(840px) {
+			margin-top: -3rem;
+		}
+	}
+
+		.hero__image {
+			height: 100%;
+		}

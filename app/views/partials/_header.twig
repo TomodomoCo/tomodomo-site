@@ -1,0 +1,22 @@
+{% set _content = block('content') %}
+
+<section class="page page--padded">
+	<div class="page__content">
+		<div class="row u-mt--s u-mb--sh">
+			<div class="col col--auto">
+				<a href="/" class="logo">{% include 'partials/svgs/_logo.svg.twig' %}</a>
+			</div>
+			<nav class="nav col col--fill">
+				{% include 'partials/_nav.twig' %}
+			</nav>
+		</div>
+
+		{% if _content %}
+		<div class="row">
+			<div class="col col--1">
+				{{_content|raw}}
+			</div>
+		</div>
+		{% endif %}
+	</div>
+</section>

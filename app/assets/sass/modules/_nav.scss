@@ -1,0 +1,36 @@
+.nav {
+	display: flex;
+	flex-direction: column;
+	margin-top: $space;
+
+	@include breakpoint(840px) {
+		margin-top: 0;
+		flex-direction: row;
+		align-items: flex-start;
+		justify-content: flex-end;
+	}
+}
+
+	.nav__link {
+		border-bottom: 2px solid transparent;
+		padding-top: 0;
+		padding-bottom: 0.5em;
+		color: rgba(black, 0.3);
+		margin-top: $space--half;
+		font-size: 10pt;
+		text-transform: uppercase;
+		font-weight: bold;
+		letter-spacing: 2px;
+		line-height: 1;
+		padding-left: 2px;
+
+		@include breakpoint(840px) {
+			margin-top: 0;
+			margin-left: $space + $space--quarter;
+		}
+
+		&:hover {
+			color: rgba(black, 0.5);
+			border-color: rgba(black, 0.4);
+		}
+	}

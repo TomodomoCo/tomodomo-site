@@ -1,0 +1,28 @@
+{% extends 'layouts/base.twig' %}
+
+{% block content %}
+
+{% embed 'partials/_page.twig' with {
+	id: "contact",
+	classes: [
+		'page--full-height',
+		'page--padded',
+	]
+} %}
+	{% block content %}
+		<div class="row">
+			<div class="col col--2 col--center">
+				<h2 class="u-mt--s u-heading">Platforms</h2>
+{% markdown %}
+We're platform agnostic. That means we don't try to sell you on a specific technical solution for the wrong reasons.
+
+For every project, we work backwards. We look at the problem so we can fully understand the stakes and the forces aat play. We make sure that our proposal reflects your needs—and if we can't meet your needs, we help you find someone who can.
+
+That said, we have a few platforms we love; platforms that keep us coming back because of their flexibility, ease-of-use, and value.
+{% endmarkdown %}
+			</div>
+		</div>
+	{% endblock %}
+{% endembed %}
+
+{% endblock %}

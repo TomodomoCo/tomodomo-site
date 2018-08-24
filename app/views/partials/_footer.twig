@@ -1,0 +1,14 @@
+{% embed 'partials/_page.twig' with {
+	id: "footer",
+	classes: [
+		'page--padded',
+	]
+} %}
+	{% block content %}
+	<div class="row">
+		<div class="col col--full">
+			<p class="u-mt--sd u-pt--sd u-ta--c">&copy; 2017 Tomodomo<br>a Van Patten Media Inc. company</p>
+		</div>
+	</div>
+	{% endblock %}
+{% endembed %}

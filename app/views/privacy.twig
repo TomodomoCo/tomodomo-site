@@ -1,0 +1,29 @@
+{% set title = 'Privacy Policy' %}
+{% extends 'layouts/base.twig' %}
+
+{% block content %}
+
+{% embed 'partials/_page.twig' with {
+	id: "contact",
+	classes: [
+		'page--alt',
+		'page--full-height',
+		'page--padded',
+	]
+} %}
+	{% block content %}
+	<div class="row">
+		<div class="col col--2">
+			{% include 'partials/_section__title.twig' with { title: 'Privacy Policy' } %}
+		</div>
+	</div>
+	<div class="row">
+		<div class="col col--2">
+<a href="https://www.iubenda.com/privacy-policy/19119053" class="iubenda-white iubenda-embed iub-no-markup iub-body-embed" title="Privacy Policy">Privacy Policy</a> <script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+		</div>
+	</div>
+	{% endblock %}
+{% endembed %}
+
+{% endblock %}
+

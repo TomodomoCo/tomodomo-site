@@ -1,0 +1,50 @@
+{% extends 'layouts/base.twig' %}
+
+{% block content %}
+
+{% embed 'partials/_page.twig' with {
+	id: "contact",
+	classes: [
+		'page--full-height',
+		'page--padded',
+	]
+} %}
+	{% block content %}
+		<div class="row">
+			<div class="col col--1">
+				<h2 class="u-mt--s u-heading">Current Openings</h2>
+{% markdown %}
+**[WordPress developer](/hiring/wordpress-developer)**<br>
+Contract/Part-Time &middot; Remote &middot; All levels
+
+**[Front-end developer](/hiring/front-end-developer)**<br>
+Contract/Part-Time &middot; Remote &middot; All levels
+{% endmarkdown %}
+			</div>
+			<div class="col col--2">
+				<h2 class="u-mt--s u-heading">Working at Tomodomo</h2>
+{% markdown %}
+Tomodomo, and our sister company Van Patten Media Inc., are remote companies. That means working for us a bit different than many jobs.
+
+To start, everyone on the team is a contractor. That means you don’t get traditional benefits from us, but it also means you have a much more flexibility. We strongly encourage everyone on our team to take other freelance roles and projects and have no restrictions of any kind on outside work, open source contributions, etc. In fact, we often refer leads directly to our team members, for projects that might be outside our typical wheelhouse.
+
+Want to go off-the-grid for a few weeks to take that trip you've been dreaming of? No problem; just give us a bit of advance warning and we'll make it work. Feel like working from the road? That's okay too.
+
+As a member of our team, we do our best to make sure you're taken care of. You set your hourly rate, and we check in yearly (at a minimum) to be sure you’re happy with what you’re getting. While we don’t offer traditional benefits (like health insurance), we think our schedule flexibility, fair rates, and referrals to potential clients (and we’re always open to other ideas) make Tomodomo/Van Patten Media Inc. a great place to work.
+
+We start every week with a team meeting (via video) where we discuss who’s tackling what over the next week. Because everyone’s hours are flexible, this is a great time for us to come together, catch up, and set priorities for the week ahead.
+
+During the week, we use Slack for communication, Teamwork for project management, and GitHub for code storage and bug tracking. We love Sketch for wireframes and mockups but we often design in the browser too. Every day we ask that you fill out an informal report about what you worked on that day, and what you plan to work on next.
+
+We ask that you track your hours in our time tracker (Harvest), so we can better estimate our costs for future projects. We run payroll weekly. You can choose to be paid via PayPal or Payoneer automatically based on the time you track in Harvest, or you can track time in your own app simultaneously and invoice us.
+
+We’re passionate about diversity, mindfulness, and work-life balance; you can [read about our values here](https://tomodomo.co/values). We like our clients to share these values too.
+
+Have specific questions? Want to talk to a team member one-on-one to see what it’s really like? [Get in touch](mailto:hiring@tomodomo.co); we’d love to help.
+{% endmarkdown %}
+			</div>
+		</div>
+	{% endblock %}
+{% endembed %}
+
+{% endblock %}

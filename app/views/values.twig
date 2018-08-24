@@ -1,0 +1,42 @@
+{% set title = 'Our company values' %}
+{% extends 'layouts/base.twig' %}
+
+{% block content %}
+
+{% embed 'partials/_page.twig' with {
+	id: "contact",
+	classes: [
+		'page--full-height',
+		'page--padded',
+	]
+} %}
+	{% block content %}
+		<div class="row">
+
+
+{% embed 'partials/_article.twig' %}
+{% block article_content %}
+<h2 class="u-mt--s u-heading">Our values</h2>
+{% markdown %}
+At Tomodomo, “community” is more than a buzzword; it’s integrated into everything we do.
+
+And it’s not just about the online world: we believe that the communities we build online directly affect the world offline. So we strive to design, build, and maintain communities that reflect the world we want to see—a world that’s more equitable, diverse, and mindful.
+
+Every decision we make has to fit our values:
+
+**We believe communities should benefit everyone, regardless of race, gender, orientation, age, etc.** Diverse communities are stronger, more engaging, and benefit more people. They open us up to new ideas and perspectives that enrich us every day. Community members should never feel discriminated against.
+
+**We strive to promote mindfulness in our products, strategy, design, and user experiences.** A well-designed product or smart strategy respects community members and the time and attention they generously share with us and our clients. Community members should never feel manipulated or hoodwinked.
+
+Our values extend to our team and internal operations as well. We aim for diverse hiring, and always want to be sure our team feels engaged and respected in how they use their time. That's why our core team shuts down on nights and weekends—the work is better when we're rested and recharged.
+
+We also encourage our team to be integrated into their local community. Whether that’s mentoring at a coding camp for young girls, speaking at local technology meetups, or volunteering for a local charity, we know our team members benefit from these offline interactions. Our leadership is regularly involved in efforts to share with communities online and off, so we're leading by example.
+{% endmarkdown %}
+{% endblock %}
+{% endembed %}
+
+
+{% endblock %}
+{% endembed %}
+
+{% endblock %}

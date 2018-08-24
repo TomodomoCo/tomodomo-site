@@ -1,0 +1,20 @@
+{% embed 'partials/_page.twig' with {
+	id: "news",
+	classes: [
+		'page--alt',
+		'page--padded',
+		'page--full-height',
+	]
+} %}
+	{% block content %}
+	<div class="row">
+		<div class="col col--2">
+			<h3 class="page__title">Tomodomo in the news</h3>
+			<p><a href="https://www.youtube.com/watch?v=dgOLafgeHEc">Front-end developer Vlad Sargu taught in the <strong>GirlsGoIT Summer STEM Camp</strong> this summer in Moldova</a>. <br><time>18 September 2017</time></p>
+			<p><a href="http://theentrepreneurhouse.com/chris-vanpatten/">Founder Chris Van Patten featured on <strong>The Entrepreneur House</strong> podcast</a>. <br><time>13 February 2017</time></p>
+			<p><a href="http://leejacksondev.com/wpinnovator/43-state-the-problem-not-the-solution-chris-van-patten/">Founder Chris Van Patten featured on the <strong>WP Innovator</strong> podcast</a>. <br><time>19 September 2016</time></p>
+		</div>
+	</div>
+	{% endblock %}
+{% endembed %}
+

@@ -1,0 +1,202 @@
+/**
+ * TODO
+ * Remove $calc conditionals, assume always use calc
+ */
+
+$debug: false;
+$calc: true;
+
+.article {
+}
+
+	/**
+	 * Article base
+	 */
+
+	.article > * {
+		@if $calc == false {
+			padding-left: 1rem;
+			padding-right: 1rem;
+		}
+
+		@include breakpoint(840px) {
+			@if $calc == true {
+				width: calc(66.6666% - 1rem - 1rem);
+			} @else {
+				width: 66.6666%;
+			}
+		}
+
+		@include breakpoint(960px) {
+			@if $calc == true {
+				width: calc(50% - 1rem - 1rem);
+			} @else {
+				width: 50%;
+			}
+		}
+
+		@if $debug == true {
+			background: rgba(yellow, 0.25);
+		}
+	}
+
+	.article.article--align-left > * {
+		@if $calc == true {
+			margin-left: 1rem;
+		} @else {
+			margin-left: 0;
+		}
+
+		margin-right: auto;
+	}
+
+	.article.article--align-center > * {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.article.article--align-right > * {
+		margin-left: auto;
+
+		@if $calc == true {
+			margin-right: 1rem;
+		} @else {
+			margin-right: 0;
+		}
+	}
+
+
+	/**
+	 * Full width block
+	 */
+
+	.article > .full {
+		width: 100%;
+
+		@if $debug == true {
+			background: rgba(red, 0.25);
+		}
+	}
+
+
+	/**
+	 * Pulls
+	 */
+
+	.article > .pull {
+		padding-top: 1px;
+		padding-bottom: 1px;
+
+		margin-top: 2em;
+		margin-bottom: 1em;
+
+		@include breakpoint(840px) {
+			@if $calc == true {
+				width: calc( 33.3333% - 1rem - 1rem );
+				margin-right: 1rem;
+				margin-left: 1rem;
+			} @else {
+				width: 33.3333%;
+			}
+
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+
+		@include breakpoint(960px) {
+			@if $calc == true {
+				width: calc( 25% - 1rem - 1rem );
+			} @else {
+				width: 25%;
+			}
+		}
+
+		@if $debug == true {
+			background: rgba(blue, 0.25);
+		}
+	}
+
+@include breakpoint(840px) {
+
+	.article > .pull.pull--wide {
+		@if $calc == true {
+			width: calc( 66.6666% - 1rem - 1rem );
+		} @else {
+			width: 66.6666%;
+		}
+	}
+
+	.article > .pull.pull--left {
+		float: left;
+	}
+
+	.article > .pull.pull--right {
+		float: right;
+	}
+
+}
+
+	@include breakpoint(960px) {
+
+	.article > .pull.pull--wide {
+		@if $calc == true {
+			width: calc( 50% - 1rem - 1rem );
+		} @else {
+			width: 50%;
+		}
+	}
+
+		.article.article--align-left {
+			& > .pull.pull--right {
+				@if $calc == true {
+					margin-right: calc( 25% + 1rem );
+				} @else {
+					margin-right: 25%;
+				}
+			}
+
+			& > .pull.pull--right.pull--wide {
+				@if $calc == true {
+					margin-right: 1rem;
+				} @else {
+					margin-right: 0;
+				}
+			}
+		}
+
+		.article.article--align-center {
+			& > .pull.pull--left,
+			& > .pull.pull--right {
+				@if $calc == true {
+					margin-left: 1rem;
+					margin-right: 1rem;
+				} @else {
+					margin-left: 0;
+					margin-right: 0;
+				}
+			}
+		}
+
+		.article.article--align-right {
+			& > .pull.pull--left {
+				@if $calc == true {
+					margin-left: calc( 25% + 1rem );
+				} @else {
+					margin-left: 25%;
+				}
+			}
+
+			& > .pull.pull--left.pull--wide {
+				@if $calc == true {
+					margin-left: 1rem;
+				} @else {
+					margin-left: 0;
+				}
+			}
+		}
+	}
+
+.article > ul, .article > ol {
+	padding-left: 2.5rem;
+}
+

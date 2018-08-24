@@ -1,0 +1,28 @@
+:root {
+	font-family: $font-family;
+	font-size: 15px;
+	line-height: 1.5;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+
+	color: $color-text;
+	background: #FEFEFE;
+
+	font-variant-numeric: lining-nums;
+}
+
+a {
+	color: $color-link;
+
+	&:hover {
+		border-bottom-width: 0.15em;
+		border-bottom-style: solid;
+		border-bottom-color: lighten($color-link, 20%);
+	}
+}

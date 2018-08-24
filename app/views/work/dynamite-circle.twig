@@ -1,0 +1,44 @@
+{% extends 'layouts/base.twig' %}
+
+{% block content %}
+
+{% embed 'partials/_page.twig' with {
+	id: "contact",
+	classes: [
+		'page--alt',
+		'page--full-height',
+		'page--padded',
+	]
+} %}
+	{% block content %}
+		{% include 'partials/_portfolio__item.twig' with {
+			image: 'dynamitecircle-1.png',
+			logo: {
+				file: 'dynamitecircle.png',
+				width: 150
+			},
+			highlights: [
+				'Design',
+				'Development',
+				'JavaScript',
+				'Vanilla Forums',
+			]
+		} %}
+
+		<div class="row">
+			<div class="col col--2 col--center">
+{% markdown %}
+If you’re a ‘location independent lifestyle business’ owner (a mouthful, to be sure!) then you have undoubtedly heard of the **Dynamite Circle**, the premier community for business owners who value personal independence, travel, and building businesses that will enable their lifestyle.
+
+Months into a redesign and migration to Vanilla Forums, the Dynamite Circle team encountered problems with their vendor that limited their ability to continue the project. Tomodomo stepped in to take charge.
+
+We worked with the client’s leadership to develop a strategy for the quickest possible turnaround. Our design team decided to start from scratch to avoid a slow training period. This allowed us to create a design that was more unified, modern, and connected to the Dynamite Circle brand. Our development team took charge and developed several new techniques that would enable custom functionality like multiline profile text fields, a Twitter-style activity stream, and more. We also did heavy customisation of the Vanilla Forums profile pages to surface critical information.
+
+After a few short weeks, the new forum design was delivered successfully, and the migration went off without a hitch.
+{% endmarkdown %}
+			</div>
+		</div>
+	{% endblock %}
+{% endembed %}
+
+{% endblock %}

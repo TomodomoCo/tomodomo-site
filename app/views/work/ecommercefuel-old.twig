@@ -1,0 +1,211 @@
+{% extends 'layouts/base.twig' %}
+
+{% block content %}
+
+{% include 'partials/_header.twig' with {
+	content: '
+'
+} %}
+
+{% embed 'partials/_page.twig' with {
+	classes: [
+		'page--padded',
+	]
+} %}
+	{% block content %}
+		<div class="row u-mt--s u-mb--s">
+			<div class="col col--1">
+				<img src="/assets/img/portfolio/ecommercefuel.png" alt="">
+			</div>
+		</div>
+		<div class="row u-mt--s">
+			<div class="col col--1 col--text">
+{% markdown %}
+We worked with **eCommerceFuel**, a leading community for e-commerce business owners, on a complete redesign of their core Vanilla Forums installation, and developed a new set of directories that made it possible for users to review and discover e-commerce related software and service providers, and find members with specific skills and experiences.
+{% endmarkdown %}
+			</div>
+			<div class="col col--1 col--text">
+				<p>
+					<label for="" class="form__label">Timeline</label>
+					2016–ongoing
+				</p>
+				<p>
+					<label for="" class="form__label">Website</label>
+					<a href="http://www.ecommercefuel.com/">http://www.ecommercefuel.com/</a>
+				</p>
+				<p>
+					<label for="" class="form__label">Platform</label>
+					Vanilla Forums, WordPress, custom
+				</p>
+				<p>
+					<label for="" class="form__label">Community Type</label>
+					Private membership
+				</p>
+			</div>
+		</div>
+	{% endblock %}
+{% endembed %}
+
+{% embed 'partials/_page.twig' with {
+	classes: [
+		'page--padded',
+		'page--alt',
+	]
+} %}
+	{% block content %}
+		<div class="row u-mt--s u-mb--s">
+			<div class="col col--2 col--text">
+				<h2>Research</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col col--2 col--text">
+{% markdown %}
+When the founder of eCommerceFuel, Andrew Youderian, approached Tomodomo about his project, the scope was multi-faceted. The community had an existing member directory and service provider directory that would need to be completely rewritten. Additionally, Andrew had envisioned the creation of a "software directory", which would automatically scan member websites for the software used on their websites, and allow members to rate and review that software.
+
+In addition, the eCommerceFuel forum—which is the central 'hub' of the eCommerceFuel community—desperately needed a redesign. The design language for the redesign already existed in the public eCommerceFuel website, but needed to be translated into a forum-ready format. Additionally, Andrew wanted to build new features into the forum: improved visibility for groups, and more robust user profiles that could display new types of data, and integrate data from the directories.
+
+The Tomodomo team focused on three tasks:
+
+1.  Writing a detailed scope that outlined intended outcomes, from the users' perspective
+2.  Preparing "data map" visuals that showed the different data types, and how they would be integrated
+3.  Assembling user interface wireframes to show how the various directories would look to end users
+
+With these documents, the Tomodomo team was able to work with Andrew to define a clear spec that would serve as a valuable reference throughout the project.
+{% endmarkdown %}
+			</div>
+			<div class="col col--1">
+				<figure class="figure">
+					<img src="/assets/img/projects/ecf-mockup.png" alt="" class="figure__image">
+					<figcaption class="figure__caption">
+						<p>An example wireframe from the eCommerceFuel project, depicting the category view for the Software Directory</p>
+					</figcaption>
+				</figure>
+			</div>
+		</div>
+	{% endblock %}
+{% endembed %}
+
+
+{% embed 'partials/_page.twig' with {
+	classes: [
+		'page--padded',
+	]
+} %}
+	{% block content %}
+		<div class="row u-mt--s u-mb--s">
+			<div class="col col--2 col--text">
+				<h2>Development</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col col--2 col--text">
+{% markdown %}
+With a clear scope in place, the Tomodomo team switched into development mode. Our team split its effort across three fronts:
+
+1.  Translating directory mockups into static HTML and CSS
+2.  Implementing the new forum design
+3.  Building the directory's technical infrastructure
+
+While turning mockups into code and implementing a forum design are relatively straightforward, the technical infrastructure for the directory required "coding creativity" and newly invented solutions.
+
+To start, the directory was built on a WordPress core, using custom post types, custom taxonomies, and object metadata. This allowed us to build and prototype more quickly than starting from scratch would have allowed. However, most functionality in the site was accessed through a custom app that "spoke" to WordPress.
+
+This blended approach made it possible to get the best of both worlds: a fully functional admin interface and easily extendable data model from WordPress, and easier templating and API integrations with the custom application.
+{% endmarkdown %}
+			</div>
+			<div class="col col--1">
+				<figure class="figure">
+					<img src="/assets/img/projects/ecf-mockup-final.png" alt="" class="figure__image">
+					<figcaption class="figure__caption">
+						<p>The same screen from the previous section, shown in its final form</p>
+					</figcaption>
+				</figure>
+			</div>
+		</div>
+	{% endblock %}
+{% endembed %}
+
+
+{% embed 'partials/_page.twig' with {
+	classes: [
+		'page--padded',
+		'page--alt',
+	]
+} %}
+	{% block content %}
+		<div class="row u-mt--s u-mb--s">
+			<div class="col col--2 col--text">
+				<h2>Profiles</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col col--2 col--text">
+{% markdown %}
+One of the most important elements of the project was moving profile data into the custom application. Although Vanilla Forums allows custom fields on profile pages through the "Profile Extender" addon, the data isn't accessible via an API, and has limited options for customising the appearance. Because we needed profile data available for search and filtering in the newly-rebuilt Member Directory, and wanted to merge in data from databases outside of Vanilla we needed an alternative approach.
+
+To make this integration possible, the Tomodomo team developed a custom "router" that would detect which page a user was viewing inside Vanilla Forums, and—if viewing a profile page or profile editing page—replace it with custom content.
+
+This gave us the ability to completely replace the profile pages with a purpose-built solution that we had full control over. It freed our designers to work outside the typical constraints of the Vanilla Forums theme engine, and allowed our developers to integrate various types of data from across the directories (and via third-party APIs).
+
+We also created a custom interface for editing the profile data, which was also injected into Vanilla Forums. The appearance was designed to be completely seamless, making the editing interface feel like a native part of the forum. This was by design, as it made it easier for users to find the editing options they were already used to without requiring substantial retraining.
+{% endmarkdown %}
+			</div>
+			<div class="col col--1">
+				<figure class="figure">
+					<img src="/assets/img/projects/ecf-profile.png" alt="" class="figure__image">
+					<figcaption class="figure__caption">
+						<p>A custom profile page</p>
+					</figcaption>
+				</figure>
+			</div>
+		</div>
+	{% endblock %}
+{% endembed %}
+
+
+{% embed 'partials/_page.twig' with {
+	classes: [
+		'page--padded',
+	]
+} %}
+	{% block content %}
+		<div class="row u-mt--s u-mb--s">
+			<div class="col col--2 col--text">
+				<h2>Smaller challenges</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col col--2 col--text">
+{% markdown %}
+In addition to the major challenges described above, we were excited to develop a number of smaller features that each served as "micro-challenges" throughout the project.
+
+For example, Andrew and his team had envisioned a "widget" that could be injected into the community to surface the best posts over a previous period of time. We developed a solution that pulled posts from the Vanilla Forums API into a custom database, and assigned each discussion a "rank score". The rank score was calculated via a standard [weighted sum model](https://en.wikipedia.org/wiki/Weighted_sum_model) algorithm, based on several factors including comment count, like count, etc. The widget could be easily embedded into the Vanilla Forums theme.
+
+Andrew also hoped to make smaller, focussed groups a more prominent part of the community. While groups had existed in eCommerceFuel, the Vanilla Forums group interface meant that group content tended to be buried through several layers of navigation, which meant it was infrequently accessed.
+
+We worked with Andrew's team to discover ways that the group content could be integrated into the main feed. Our initial solution was purely technical, and was built on the existing Vanilla Forums group infrastructure. Because group content isn't accessible via API, we wrote a custom scraper to fetch post data and expose it via RESTful endpoints. Then, we injected the posts into a widget near the standard forum feed. This worked, but with several drawbacks: data wasn't accurate in real time, and it was not possible for users to determine if they had already seen a given post.
+
+However, at a late stage in the project Andrew's team discovered a way to create "private categories", which would allow the posts to show up in the standard feed, so they were treated as regular discussions. We developed an alternative tool that was able to give these posts a special style, indicating that the content was from a group.
+{% endmarkdown %}
+			</div>
+			<div class="col col--1">
+				<figure class="figure">
+					<img src="/assets/img/projects/ecf-best.png" alt="" class="figure__image">
+					<figcaption class="figure__caption">
+						<p>The "best content" widget allows users to display content, ranked by various factors, over certain time periods and within certain categories</p>
+					</figcaption>
+				</figure>
+				<figure>
+					<img src="/assets/img/projects/ecf-group.png" alt="" class="figure__image">
+					<figcaption class="figure__caption">
+						<p>A private group discussion, displayed with a special border to separate it from other posts in the main forum feed</p>
+					</figcaption>
+				</figure>
+			</div>
+		</div>
+	{% endblock %}
+{% endembed %}
+
+
+{% endblock %}

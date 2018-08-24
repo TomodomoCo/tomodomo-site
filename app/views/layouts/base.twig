@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include '../partials/_head.twig' %}
+<body id="top">
+	{% block header %}
+	<header>
+		{% include 'partials/_header.twig' %}
+	</header>
+	{% endblock %}
+
+	<main>
+		{% block content %}{% endblock %}
+	</main>
+
+	{% block footer %}
+	<footer>
+		{% include 'partials/_footer.twig' %}
+	</footer>
+	{% endblock %}
+</body>
+</html>

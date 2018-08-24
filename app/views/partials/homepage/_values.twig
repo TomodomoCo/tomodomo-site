@@ -1,0 +1,16 @@
+{% embed 'partials/_page.twig' with {
+	classes: [
+		'page--padded',
+	]
+} %}
+	{% block content %}
+	<div class="row">
+		<section class="col col--full values">
+			<p class="values__kanji">{% include 'partials/svgs/_tomodomo-kanji.svg.twig' with { width: 100 } %}</p>
+			{% markdown %}
+			Tomodomo is a Japanese word that means _togetherness_, or _each and every one_.<br>When we say “each and every one,” we mean it. <a href="/values">Learn why (and how).</a>
+			{% endmarkdown %}
+		</section>
+	</div>
+	{% endblock %}
+{% endembed %}
