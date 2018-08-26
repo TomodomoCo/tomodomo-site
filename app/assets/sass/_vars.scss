@@ -1,18 +1,19 @@
+// Font settings
 $font-family--native: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-
 $font-family: "Univers W01", $font-family--native;
 $font-family--header: 'ITC Century Std', 'Times New Roman', Times;
 $font-family--alt: 'Lekton-Tomodomo', monospace;
 
+// Spacing
 $space: 1rem;
-$space--quarter: $space * 0.25;
-$space--half: $space * 0.5;
-$space--double: $space * 2;
 
-$space--three-quarters: $space--quarter + $space--quarter + $space--quarter;
-$space--plus-one-quarter: $space + $space--quarter;
+// Gridlex
+$gl-gutter: $space * 2;
+$gl-gutter-vertical: 0;
 
+// Colors
 $color-text: #555;
 $color-link: desaturate(darken(blue, 5%), 25%);
 
+// Generics
 $border-radius: 5px;

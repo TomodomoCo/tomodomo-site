@@ -43,7 +43,7 @@
 }
 
 .u-mb--sh {
-	margin-bottom: $space--half;
+	margin-bottom: $space * 0.5;
 }
 
 
@@ -59,11 +59,11 @@
 }
 
 .u-pt--sd {
-	padding-top: $space--double;
+	padding-top: $space * 2;
 }
 
 .u-pt--sh {
-	padding-top: $space--half;
+	padding-top: $space * 0.5;
 }
 
 /**
@@ -78,11 +78,11 @@
 }
 
 .u-pb--sd {
-	padding-bottom: $space--double;
+	padding-bottom: $space * 2;
 }
 
 .u-pb--sh {
-	padding-bottom: $space--half;
+	padding-bottom: $space * 0.5;
 }
 
 /**

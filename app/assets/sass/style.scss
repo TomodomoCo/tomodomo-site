@@ -1,12 +1,27 @@
+/**
+ * Externals
+ */
 @import "sanitize-css/lib/sanitize.scss";
-@import "global/fonts";
-@import "global/vars";
-
-//@import "susy";
 @import "breakpoint";
 
-@import "layout/**/*";
-@import "modules/**/*";
+/**
+ * Internal basics
+ */
+@import "vars";
+@import "fonts";
 
-@import "global/utilities";
-@import "global/shame";
+/**
+ * General site-wide styles
+ */
+@import "general/**/*";
+
+/**
+ * Site blocks
+ */
+@import "blocks/**/*";
+
+/**
+ * Final imports
+ */
+@import "utilities";
+@import "shame";

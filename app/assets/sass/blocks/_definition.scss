@@ -2,7 +2,7 @@
 
 	.definition .definition__word {
 		margin-top: $space;
-		margin-bottom: $space--three-quarters;
+		margin-bottom: $space * 0.75;
 		font-size: 2.25em;
 		font-style: italic;
 		line-height: 0.8;
@@ -25,14 +25,14 @@
 
 	.definition__header {
 		margin-top: $space;
-		margin-bottom: $space--half;
+		margin-bottom: $space * 0.5;
 		padding-top: $space;
 
 		@extend %heading;
 	}
 
 	.definition__defs {
-		margin-top: $space--quarter;
+		margin-top: $space * 0.25;
 		margin-bottom: $space;
 		margin-left: 1.4em;
 		font-size: 1.2em;
