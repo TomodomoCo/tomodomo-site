@@ -2,5 +2,8 @@
 
 {% block content %}
 
+    {% for post in posts %}
+        {{post.content}}
+    {% endfor %}
 
 {% endblock %}
