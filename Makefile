@@ -1,5 +1,5 @@
 build:
-	npm i
+	npm install
 	npm run build
-	npx lerna bootstrap
-	npx lerna exec --parallel --bail=false -- npm run build
+	npm run lerna-install
+	npm run lerna-build

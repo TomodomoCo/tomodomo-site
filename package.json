@@ -24,8 +24,13 @@
   },
   "scripts": {
     "build": "npx gulp",
-    "lint-php": "./vendor/composer/bin/phpcs",
     "dev": "npx gulp watch",
+    "lerna-install": "npx lerna bootstrap",
+    "lerna-build": "npx lerna exec --parallel --bail=false -- npm run build",
+    "lerna-dev": "npx lerna exec --parallel --bail=false -- npm run dev",
+    "phpcs": "./vendor/composer/bin/phpcs",
+    "psalm": "./vendor/composer/bin/psalm",
+    "lint-php": "npm run phpcs; npm run psalm",
     "postinstall": "npx bower install"
   }
 }
