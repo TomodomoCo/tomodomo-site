@@ -24,6 +24,7 @@
   },
   "scripts": {
     "build": "npx gulp",
+    "lint-php": "./vendor/composer/bin/phpcs",
     "dev": "npx gulp watch",
     "postinstall": "npx bower install"
   }

@@ -18,7 +18,8 @@
     "twigjs-bower": "^0.10.5",
     "moment": "^2.22.2",
     "li": "^1.2.1",
-    "jquery-cycle2": "~2.1.6"
+    "jquery-cycle2": "~2.1.6",
+    "gridlex": "^2.7.1"
   },
   "overrides": {
     "jquery": {
