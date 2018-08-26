@@ -1,6 +1,7 @@
 # Compiled files and dependencies
 public/assets/
 public/content/plugins/
+public/content/themes/
 public/content/uploads/
 vendor/
 node_modules/
