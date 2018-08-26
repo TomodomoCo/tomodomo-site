@@ -1,0 +1,24 @@
+{
+  "name": "tomodomo/theme",
+  "description": "Tomodomo website theme",
+  "type": "wordpress-theme",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Tomodomo",
+      "email": "hello@tomodomo.co"
+    }
+  ],
+  "config": {
+    "sort-packages": true
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "extra": {
+    "installer-name": "tomodomo"
+  },
+  "require": {
+    "php": "^7.0"
+  }
+}
+
