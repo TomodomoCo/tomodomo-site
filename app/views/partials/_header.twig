@@ -3,6 +3,8 @@
         <a href="/" class="logo">{% include 'partials/svgs/_logo.svg.twig' %}</a>
     </div>
     <nav class="col-7 nav">
-        {% include 'partials/_nav.twig' %}
+        {% for item in menu.primary.items %}
+            <a href="{{ item.link }}" class="nav__link">{{ item.title }}</a>
+        {% endfor %}
     </nav>
 </header>
