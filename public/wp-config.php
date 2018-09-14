@@ -1,17 +1,21 @@
 <?php
 
+// Get the directory
+$dir = dirname(__FILE__);
+
 /**
  * Require the Composer autoloader
  */
-require_once( ABSPATH . '../../vendor/composer/autoload.php' );
+require_once("{$dir}/../vendor/composer/autoload.php");
+
 
 /**
  * Setup the YAML parser, load some yaml files
  */
 use Symfony\Component\Yaml\Parser;
 $yaml     = new Parser();
-$project  = $yaml->parse( file_get_contents( dirname( __FILE__ ) . './../config/project.yml' ) );
-$database = $yaml->parse( file_get_contents( dirname( __FILE__ ) . './../config/secrets/database.yml' ) );
+$project  = $yaml->parse(file_get_contents("{$dir}/../config/project.yml"));
+$database = $yaml->parse(file_get_contents("{$dir}/../config/secrets/database.yml"));
 
 /**
  * Throw an error if things break
@@ -109,13 +113,13 @@ define( 'WP_SITEURL', WP_HOME );
 /**
  * Custom Content Directory
  */
-define( 'WP_CONTENT_DIR', dirname( __FILE__ ) . '/content' );
-define( 'WP_CONTENT_URL', WP_HOME . '/content' );
+define('WP_CONTENT_DIR', "{$dir}/content");
+define('WP_CONTENT_URL', WP_HOME . '/content');
 
 /**
  * Debug settings
  */
-if ( WP_DEBUG == true ) {
+if ( WP_DEBUG === true ) {
 	ini_set( 'display_errors', '1' );
 	define( 'WP_DEBUG_DISPLAY', true );
 } else {
@@ -147,17 +151,18 @@ define( 'DB_COLLATE', '' );
 /**
  * Salts, for security
  */
-if ( file_exists( dirname( __FILE__ ) . '/./../config/secrets/wp-salts.php' ) ) {
-	include dirname( __FILE__ ) . '/./../config/secrets/wp-salts.php';
+if (file_exists("{$dir}/../config/secrets/wp-salts.php")) {
+	include "{$dir}/../config/secrets/wp-salts.php";
 } else {
-	trigger_error( 'There is no config/secrets/wp-salts.php file for the ' . strip_tags( $_SERVER['SERVER_NAME'] ) . ' site.' , E_USER_WARNING );
+	trigger_error('There is no config/secrets/wp-salts.php file for the ' . strip_tags($_SERVER['SERVER_NAME']) . ' site.' , E_USER_WARNING);
 }
 
 /**
  * Bootstrap WordPress
  */
-if ( !defined( 'ABSPATH' ) )
-	define( 'ABSPATH', dirname( __FILE__ ) . '/wp/' );
+if (!defined('ABSPATH')) {
+	define('ABSPATH', "{$dir}/wp/");
+}
 
 require_once( ABSPATH . 'wp-settings.php' );
 
