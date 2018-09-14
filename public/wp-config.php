@@ -104,7 +104,7 @@ define( 'WPLANG', '' );
 /**
  * Path to WordPress
  */
-define( 'WP_SITEURL', WP_HOME . '/wp' );
+define( 'WP_SITEURL', WP_HOME );
 
 /**
  * Custom Content Directory
@@ -158,6 +158,7 @@ if ( file_exists( dirname( __FILE__ ) . '/./../config/secrets/wp-salts.php' ) ) 
  */
 if ( !defined( 'ABSPATH' ) )
 	define( 'ABSPATH', dirname( __FILE__ ) . '/wp/' );
+
 require_once( ABSPATH . 'wp-settings.php' );
 
 /**

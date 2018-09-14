@@ -1,3 +1,6 @@
+RewriteEngine On
+RewriteBase /
+RewriteRule ^(wp-(?!json|content).*)$ wp/$1 [L]
 
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
