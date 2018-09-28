@@ -3,13 +3,15 @@
 namespace Tomodomo\Theme;
 
 use Tomodomo\Models\Menu;
+use Tomodomo\WpAssetRegistrar\Registrar;
 
 /**
  * Add theme support
  *
  * @return void
  */
-function themeSupports() {
+function themeSupports()
+{
     // Featured images
     add_theme_support('post-thumbnails');
 
@@ -51,7 +53,8 @@ add_action('init', __NAMESPACE__ . '\\registerMenus');
  *
  * @return array
  */
-function context($context) {
+function context($context)
+{
     // Load in menus
     $context['menu']['primary'] = new Menu('primary');
     $context['menu']['footer']  = new Menu('footer');
@@ -80,3 +83,19 @@ add_filter('theme_page_templates', function (array $templates) {
     ];
 });
 */
+
+$registrar = new Registrar();
+
+add_action('wp_enqueue_scripts', function () use ($registrar) {
+    $registrar->addStyle('tomodomo-css', '/assets/css/style.css');
+    $registrar->addScript('tomodomo-js', '/assets/js/script.js');
+});
+
+add_action('wp_enqueue_scripts', function () use ($registrar) {
+    $registrar->enqueueStyles();
+    $registrar->enqueueScripts();
+});
+
+add_action('wp_enqueue_block_editor_assets', function () use ($registrar) {
+    $registrar->enqueueStyles();
+});
