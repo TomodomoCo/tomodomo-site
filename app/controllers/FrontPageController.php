@@ -2,7 +2,7 @@
 
 namespace Tomodomo\Controllers;
 
-use Tomodomo\Models\Post;
+use Tomodomo\Models\Page;
 
 class FrontPageController extends BaseController
 {
@@ -19,9 +19,9 @@ class FrontPageController extends BaseController
     {
         // Context
         $context = [
-            'post' => new Post(),
+            'post' => new Page(),
         ];
 
-        return $this->twig->compile('page.twig', $context);
+        return $this->twig->compile('canvas.twig', $context);
     }
 }
