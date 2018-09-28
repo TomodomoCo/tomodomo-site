@@ -34,10 +34,8 @@ class Twig
             $this->container['context']
         );
 
-        // Make template an array
-        if (!is_array($template)) {
-            $template = [$template];
-        }
+        // Make sure template an array
+        $template = is_array($template) ? $template : [$template];
 
         return Timber::compile($template, $settings);
     }
