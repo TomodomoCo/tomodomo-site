@@ -26,3 +26,12 @@ a {
 		border-bottom-color: lighten($color-link, 20%);
 	}
 }
+
+.body {
+  max-width: 75rem;
+  margin-left: auto;
+  margin-right: auto;
+
+  padding-left: $gl-gutter;
+  padding-right: $gl-gutter;
+}
