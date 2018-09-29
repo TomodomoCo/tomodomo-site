@@ -1,11 +1,22 @@
+{% set image = 'https://placehold.it/1920x800' %}
 {% extends 'layouts/base.twig' %}
 
 {% block content %}
 
     {% for post in posts %}
-    <div class="page">
-        {{post.content}}
-    </div>
+    <article class="content">
+        <header class="content__header">
+            <h1>{{post.title}}</h1>
+            {% if post.excerpt %}
+            <div class="content__subhead">
+                <p>{{post.excerpt}}</p>
+            </div>
+            {% endif %}
+        </header>
+        <div class="content__body entry-content">
+            {{post.content}}
+        </div>
+    </article>
     {% endfor %}
 
 {% endblock %}

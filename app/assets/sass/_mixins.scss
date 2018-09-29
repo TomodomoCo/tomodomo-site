@@ -1,0 +1,10 @@
+@mixin bs-background($color, $top, $right, $bottom, $left)
+{
+  background: $color;
+
+  box-shadow:
+    $left ($top * -1) $color,
+    ($right * -1) ($top * -1) $color,
+    $left $bottom $color,
+    ($right * -1) $bottom $color;
+}

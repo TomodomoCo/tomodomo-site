@@ -1,7 +1,29 @@
-.quote {
-	font-style: italic;
-}
+.wp-block-quote {
+  position: relative;
+  text-align: start;
+  margin-top: $space * 4;
+  margin-bottom: $space * 4;
 
-	.quote__footer {
-		margin-top: $space * -0.5;
+  *:not(cite:last-child) {
+    font-family: $font-family--native;
+    font-size: 1.5em;
+    font-weight: 900;
+
+		margin-top: $space;
+		margin-bottom: $space;
+  }
+
+	cite:last-child {
+    display: inline-block;
+    font-family: $font-family--native;
+    font-style: normal;
+    font-size: 0.8em;
+
+		margin-bottom: $space;
+    padding-top: $space * 0.5;
+    padding-right: $space;
+
+    color: $color-text--lighter;
+    border-top: 2px solid $color-text--lightest;
 	}
+}

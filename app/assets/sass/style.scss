@@ -1,27 +1,26 @@
-/**
- * Externals
- */
+// Externals
 @import "sanitize-css/lib/sanitize.scss";
 @import "breakpoint";
 
-/**
- * Internal basics
- */
+// Basics
 @import "vars";
 @import "fonts";
+@import "mixins";
 
-/**
- * General site-wide styles
- */
+%heading {
+  color: red;
+  background: red;
+}
+
+// General site-wide styles
 @import "general/**/*";
 
-/**
- * Site blocks
- */
+// Site blocks
 @import "blocks/**/*";
 
-/**
- * Final imports
- */
+// Site legacy content
+@import "legacy/**/*";
+
+// Final imports
 @import "utilities";
 @import "shame";

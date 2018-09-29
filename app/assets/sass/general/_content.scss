@@ -1,0 +1,184 @@
+$debug: false;
+
+.content {
+}
+
+  .content__header {
+    h1 {
+      display: inline;
+      line-height: 1.2;
+    }
+
+    .content__subhead {
+      max-width: 40em;
+
+      margin-top: $space * -0.1;
+      margin-left: auto;
+
+      padding-top: 1px;
+
+      font-family: $font-family--native;
+
+      @include bs-background(#a7d2e1, $space * 0.2, $space, $space * 0.8, $space);
+    }
+  }
+
+  .content__body {
+    margin-left: $space * -1;
+    margin-right: $space * -1;
+    text-align: justify;
+  }
+
+    .content__body > * {
+      margin-left: $space;
+      margin-right: $space;
+
+      @include breakpoint(840px) {
+        width: calc(66.6666% - #{$space * 2});
+      }
+
+      @include breakpoint(960px) {
+        width: calc(50% - #{$space * 2});
+      }
+
+      @if $debug == true {
+        background: rgba(yellow, 0.25);
+      }
+    }
+
+    // wp-block-image should be effectively passthrough
+    .content__body > .wp-block-image {
+      width: auto;
+      margin: 0;
+    }
+
+    // For now, let's not worry about these fancy alignments
+    /*
+    .content__body.content__body--align-left > * {
+      margin-left: 1rem;
+
+      margin-right: auto;
+    }
+
+    .content__body.content__body--align-center > * {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .content__body.content__body--align-right > * {
+      margin-left: auto;
+
+      margin-right: 1rem;
+    }
+    */
+
+
+    // Width alignments
+    .content__body .alignfull,
+    .content__body .alignwide {
+      width: calc(100% - #{$space * 2});
+    }
+
+    .content__body .alignfull {
+      @if $debug == true {
+        background: rgba(red, 0.25);
+      }
+    }
+
+    .content__body .alignwide {
+      @if $debug == true {
+        background: rgba(blue, 0.25);
+      }
+
+      @include breakpoint(840px) {
+        width: calc(66.6666% - #{$space * 2});
+      }
+
+      @include breakpoint(960px) {
+        width: calc(75% - #{$space * 2});
+      }
+    }
+
+
+    // Left and right alignment
+    .content__body .alignleft,
+    .content__body .alignright {
+      padding-top: 1px;
+      padding-bottom: 1px;
+
+      margin-top: 1em;
+      margin-bottom: 1em;
+
+      margin-left: $space;
+      margin-right: $space;
+
+      @include breakpoint(840px) {
+        width: calc(33.3333% - #{$space * 2});
+
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+
+      @if $debug == true {
+        background: rgba(blue, 0.25);
+      }
+    }
+
+    .content__body .alignleft {
+      @include breakpoint(840px) {
+        float: left;
+      }
+
+      @include breakpoint(960px) {
+        width: calc(25% - #{$space * 2});
+      }
+    }
+
+    .content__body .alignright {
+      @include breakpoint(840px) {
+        float: right;
+      }
+
+      @include breakpoint(960px) {
+        width: calc(50% - #{$space * 2});
+      }
+    }
+
+      // For now, ignore these fancy alignments
+      /*
+      .content__body.content__body--align-left {
+        & > .pull.pull--right {
+          margin-right: calc( 25% + 1rem );
+        }
+
+        & > .pull.pull--right.pull--wide {
+          margin-right: 1rem;
+        }
+      }
+
+      .content__body.content__body--align-center {
+        & > .pull.pull--left,
+        & > .pull.pull--right {
+          margin-left: 1rem;
+          margin-right: 1rem;
+        }
+      }
+
+      .content__body.content__body--align-right {
+        & > .pull.pull--left {
+          margin-left: calc( 25% + 1rem );
+        }
+
+        & > .pull.pull--left.pull--wide {
+          margin-left: 1rem;
+        }
+      }
+      */
+
+  // @todo this should inherit margins from elsewhere
+  .content__body > ul,
+  .content__body > ol {
+    margin-left: $space;
+    margin-right: $space;
+    padding-left: 2.5rem;
+  }
