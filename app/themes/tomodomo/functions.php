@@ -18,9 +18,6 @@ function themeSupports()
     // Gutenberg wide alignment
     add_theme_support('align-wide');
 
-    // Disable Gutenberg colors
-    add_theme_support('disable-custom-colors');
-
     // Auto-generate the title tag
     add_theme_support('title-tag');
 
@@ -84,18 +81,27 @@ add_filter('theme_page_templates', function (array $templates) {
 });
 */
 
+/**
+ * Handle asset registration
+ */
 $registrar = new Registrar();
 
 add_action('wp_enqueue_scripts', function () use ($registrar) {
-    $registrar->addStyle('tomodomo-css', '/assets/css/style.css');
-    $registrar->addScript('tomodomo-js', '/assets/js/script.js');
+    $registrar->addStyle('tomodomo-css', 'assets/css/style.css');
+    $registrar->addScript('tomodomo-js', 'assets/js/script.js');
+
+    return;
 });
 
 add_action('wp_enqueue_scripts', function () use ($registrar) {
     $registrar->enqueueStyles();
     $registrar->enqueueScripts();
+
+    return;
 });
 
 add_action('wp_enqueue_block_editor_assets', function () use ($registrar) {
     $registrar->enqueueStyles();
+
+    return;
 });

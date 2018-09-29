@@ -5,11 +5,11 @@ namespace Tomodomo\WpAssetRegistrar;
 class Registrar
 {
     /**
-     * The absolute path to the public directory
+     * The arguments to use
      *
-     * @var string
+     * @var array
      */
-    private $basePath;
+    private $args = [];
 
     /**
      * The registered scripts
@@ -28,14 +28,18 @@ class Registrar
     /**
      * Instantiate the library
      *
-     * @param string|null $basePath
+     * @param string|null $args
      *
      * @return Registrar
      */
-    public function __construct($basePath = null)
+    public function __construct($args = [])
     {
-        // Set the base path from the user-supplied parameter or a default
-        $this->basePath = $basePath ?? untrailingslashit(dirname(ABSPATH));
+        $defaults = [
+            'basePath' => trailingslashit(dirname(ABSPATH)),
+            'urlPath'  => '/',
+        ];
+
+        $this->args = wp_parse_args($args, $defaults);
 
         return $this;
     }
@@ -57,9 +61,9 @@ class Registrar
 
         $defaults = [
             'dependencies' => [],
-            'version'      => filemtime($this->basePath . $path),
+            'version'      => filemtime($this->args['basePath'] . $path),
             'footer'       => true,
-            'url'          => home_url($path),
+            'url'          => $this->args['urlPath'] . $path,
         ];
 
         $args = wp_parse_args($args, $defaults);
@@ -93,9 +97,9 @@ class Registrar
 
         $defaults = [
             'dependencies' => [],
-            'version'      => filemtime($this->basePath . $path),
+            'version'      => filemtime($this->args['basePath'] . $path),
             'media'        => 'all',
-            'url'          => home_url($path),
+            'url'          => $this->args['urlPath'] . $path,
         ];
 
         $args = wp_parse_args($args, $defaults);
