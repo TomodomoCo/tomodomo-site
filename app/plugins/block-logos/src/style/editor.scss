@@ -1,0 +1,15 @@
+.wp-block-tomodomo-logos {
+  & > .editor-inner-blocks > .editor-block-list__layout {
+    display: flex;
+
+    & > .editor-block-list__block {
+      flex: 1;
+      padding: 10px;
+      background: red;
+
+      &:nth-child(even) {
+        background: blue;
+      }
+    }
+  }
+}

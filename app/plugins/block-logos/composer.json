@@ -1,0 +1,31 @@
+{
+  "name": "tomodomo/block-logos",
+  "description": "Gutenberg block for creating a grid of logos",
+  "type": "wordpress-plugin",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Tomodomo",
+      "email": "hello@tomodomo.co"
+    }
+  ],
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "config": {
+    "sort-packages": true
+  },
+  "extra": {
+    "installer-name": "tomodomo-block-logos"
+  },
+  "require": {
+    "php": "^7.0",
+    "tomodomo/wp-asset-registrar": "*@dev"
+  },
+  "autoload": {
+    "psr-4": {
+      "Tomodomo\\Gutenberg\\Block\\": [
+        "lib/"
+      ]
+    }
+  }
+}
