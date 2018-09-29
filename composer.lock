@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "7cc74c9df52f6c65e9ea3a9b110182e4",
+    "content-hash": "aae4a9a64968d7459798da0f367377ba",
     "packages": [
         {
             "name": "altorouter/altorouter",
@@ -950,6 +950,41 @@
                 "issues": "https://github.com/TomodomoCo/gutenberg-block-columns/issues"
             },
             "time": "2018-09-26T19:46:01+00:00"
+        },
+        {
+            "name": "tomodomo/block-logos",
+            "version": "dev-dev",
+            "dist": {
+                "type": "path",
+                "url": "./app/plugins/block-logos",
+                "reference": "6974f97fa6bf30c0794b75f75908f65341e10f04",
+                "shasum": null
+            },
+            "require": {
+                "php": "^7.0",
+                "tomodomo/wp-asset-registrar": "*@dev"
+            },
+            "type": "wordpress-plugin",
+            "extra": {
+                "installer-name": "tomodomo-block-logos"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Tomodomo\\Gutenberg\\Block\\": [
+                        "lib/"
+                    ]
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tomodomo",
+                    "email": "hello@tomodomo.co"
+                }
+            ],
+            "description": "Gutenberg block for creating a grid of logos"
         },
         {
             "name": "tomodomo/kaiso",
@@ -2018,7 +2053,8 @@
         "tomodomo/kaiso": 20,
         "tomodomo/block-columns": 20,
         "tomodomo/theme": 20,
-        "tomodomo/wp-asset-registrar": 20
+        "tomodomo/wp-asset-registrar": 20,
+        "tomodomo/block-logos": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
