@@ -1,0 +1,9 @@
+.footer {}
+
+  .footer__copyright {
+    text-align: center;
+    margin-top: $space * 4;
+
+    font-family: $font__family--heading;
+    text-transform: uppercase;
+  }
