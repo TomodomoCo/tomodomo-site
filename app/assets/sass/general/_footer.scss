@@ -3,7 +3,21 @@
   .footer__copyright {
     text-align: center;
     margin-top: $space * 4;
+    margin-bottom: $space * 2;
 
     font-family: $font__family--heading;
+    font-size: 0.8em;
     text-transform: uppercase;
+
+    color: rgba(black, 0.25);
+
+    &:before {
+      content: ' ';
+      display: block;
+      max-width: 20em;
+
+      margin: 0 auto ($space * 2);
+
+      border-bottom: 2px solid rgba(black, 0.1);
+    }
   }

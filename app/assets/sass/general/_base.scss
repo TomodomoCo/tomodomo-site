@@ -43,7 +43,7 @@ a {
   padding-left:  $space;
   padding-right: $space;
 
-  @include breakpoint(30rem) {
+  @include breakpoint(40rem) {
     padding-left:  $space * 2;
     padding-right: $space * 2;
   }
