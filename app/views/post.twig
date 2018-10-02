@@ -1,19 +1,24 @@
-{% set image = 'https://placehold.it/1920x800' %}
+{% set image = 'https://loremflickr.com/1920/800/london' %}
 {% extends 'layouts/base.twig' %}
 
 {% block content %}
 
     {% for post in posts %}
-    <article class="content">
+	<article class="content" itemscope itemtype="http://schema.org/Article">
         <header class="content__header">
-            <h1>{{post.title}}</h1>
-            {% if post.excerpt %}
-            <div class="content__subhead">
-                <p>{{post.excerpt}}</p>
+            <h1 class="content__title"><span>{{post.title}} with more text</span></h1>
+
+            <div class="wide">
+                <div class="content__image" style="background-image: url({{image}});"></div>
             </div>
+
+            <div class="content__subhead">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse gravida elit vel massa consequat, posuere sodales nisi dictum. Integer pellentesque, orci at condimentum suscipit, ligula leo iaculis risus, mattis vestibulum risus sapien eget lacus. Donec ultrices volutpat nisl a sagittis.</p>
+            </div>
+            {% if post.excerpt %}
             {% endif %}
         </header>
-        <div class="content__body entry-content">
+        <div class="content__body entry-content" itemprop="articleBody">
             {{post.content}}
         </div>
     </article>

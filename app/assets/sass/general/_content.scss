@@ -4,22 +4,71 @@ $debug: false;
 }
 
   .content__header {
-    h1 {
-      display: inline;
-      line-height: 1.2;
+    margin-top: 5vh;
+
+    .content__title {
+      position: relative;
+      z-index: 10;
+      overflow: hidden;
+      max-width: 12em;
+
+      // Do a weird padding dance to prevent overflow issues
+      $content__title--padding: 0.2em;
+      padding:      $content__title--padding;
+      margin-left:  $content__title--padding * -1;
+      margin-right: $content__title--padding * -1;
+
+      // Pull the featured image up
+      // @todo make sure this works without a feature image
+      margin-bottom: -0.55em;
+
+      font-size: 4em;
+      line-height: 1;
+      text-transform: uppercase;
+      color: black;
+      word-spacing: 0.2em;
+
+      // This applies the white space around the text. It's a weird hack
+      span {
+        background: linear-gradient(
+          to bottom,
+          transparent 0%,
+          transparent 50%,
+          $color__background 50%
+        );
+        box-shadow: 0.2em 0.2em 0 $color__background, -0.2em 0.2em 0 $color__background;
+      }
+    }
+
+    .content__image {
+      min-height: 25em;
+      background-size: cover;
+      background-position: center;
+      background-color: darken($color__background, 15%);
     }
 
     .content__subhead {
-      max-width: 40em;
+      position: relative;
+      z-index: 100;
+      max-width: 35em;
 
-      margin-top: $space * -0.1;
-      margin-left: auto;
+      background: $color__background;
 
-      padding-top: 1px;
+      padding: ($space * 0.5) $space;
+      margin-top:  $space * -2.5;
+      margin-left: $space * -1;
 
-      font-family: $font-family--native;
+      font-family: $font__family--heading;
+      font-size: 1.2em;
+      font-weight: 600;
 
-      @include bs-background(#a7d2e1, $space * 0.2, $space, $space * 0.8, $space);
+      *:first-child {
+        margin-top: 0;
+      }
+
+      *:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -51,26 +100,6 @@ $debug: false;
       width: auto;
       margin: 0;
     }
-
-    // For now, let's not worry about these fancy alignments
-    /*
-    .content__body.content__body--align-left > * {
-      margin-left: 1rem;
-
-      margin-right: auto;
-    }
-
-    .content__body.content__body--align-center > * {
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .content__body.content__body--align-right > * {
-      margin-left: auto;
-
-      margin-right: 1rem;
-    }
-    */
 
 
     // Width alignments
@@ -143,42 +172,3 @@ $debug: false;
         width: calc(50% - #{$space * 2});
       }
     }
-
-      // For now, ignore these fancy alignments
-      /*
-      .content__body.content__body--align-left {
-        & > .pull.pull--right {
-          margin-right: calc( 25% + 1rem );
-        }
-
-        & > .pull.pull--right.pull--wide {
-          margin-right: 1rem;
-        }
-      }
-
-      .content__body.content__body--align-center {
-        & > .pull.pull--left,
-        & > .pull.pull--right {
-          margin-left: 1rem;
-          margin-right: 1rem;
-        }
-      }
-
-      .content__body.content__body--align-right {
-        & > .pull.pull--left {
-          margin-left: calc( 25% + 1rem );
-        }
-
-        & > .pull.pull--left.pull--wide {
-          margin-left: 1rem;
-        }
-      }
-      */
-
-  // @todo this should inherit margins from elsewhere
-  .content__body > ul,
-  .content__body > ol {
-    margin-left: $space;
-    margin-right: $space;
-    padding-left: 2.5rem;
-  }

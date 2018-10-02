@@ -3,7 +3,7 @@
 	border-radius: 3px;
 	font-size: 0.9em;
 	padding: 0.5em 0.7em;
-	font-family: $font-family--native;
+	font-family: $font__family--native;
 	border: 1px solid #EFEFEF;
 }
 
@@ -30,7 +30,7 @@
 	display: block;
 	margin-bottom: 0.4em;
 	font-size: 10.5pt;
-	font-family: $font-family--alt;
+	font-family: $font__family--alt;
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	font-weight: bold;

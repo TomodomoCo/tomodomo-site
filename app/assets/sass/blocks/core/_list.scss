@@ -1,4 +1,6 @@
 ul,
 ol {
-  margin-left: $space * 2;
+  margin-left: $space;
+  margin-right: $space;
+  padding-left: 2.5rem;
 }

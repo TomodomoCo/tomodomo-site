@@ -1,5 +1,5 @@
 :root {
-	font-family: $font-family;
+	font-family: $font__family;
 	font-size: 20px;
 	line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -12,19 +12,19 @@
 body {
 	margin: 0;
 
-	color: $color-text;
-	background: #FEFEFE;
+	color: $color__text;
+	background: $color__background;
 
 	font-variant-numeric: lining-nums;
 }
 
 a {
-	color: $color-link;
+	color: $color__link;
 
 	&:hover {
 		border-bottom-width: 0.15em;
 		border-bottom-style: solid;
-		border-bottom-color: lighten($color-link, 20%);
+		border-bottom-color: lighten($color__link, 20%);
 	}
 }
 

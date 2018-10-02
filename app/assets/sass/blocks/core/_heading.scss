@@ -4,13 +4,17 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $font-family--heading;
+  font-family: $font__family--heading;
+  font-weight: 900;
   letter-spacing: -0.03em;
-  font-weight: 800;
+  text-align: left;
+
+  margin-top: 1em;
+  margin-bottom: $space;
 }
 
 h1 {
-    font-size: 2.5rem;
+  font-size: 2.5rem;
 }
 
 h2 {

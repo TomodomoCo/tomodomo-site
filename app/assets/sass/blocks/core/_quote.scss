@@ -5,7 +5,7 @@
   margin-bottom: $space * 4;
 
   *:not(cite:last-child) {
-    font-family: $font-family--native;
+    font-family: $font__family--heading;
     font-size: 1.5em;
     font-weight: 900;
 
@@ -15,7 +15,7 @@
 
 	cite:last-child {
     display: inline-block;
-    font-family: $font-family--native;
+    font-family: $font__family--native;
     font-style: normal;
     font-size: 0.8em;
 
@@ -23,7 +23,7 @@
     padding-top: $space * 0.5;
     padding-right: $space;
 
-    color: $color-text--lighter;
-    border-top: 2px solid $color-text--lightest;
+    color: $color__text--lighter;
+    border-top: 2px solid $color__text--lightest;
 	}
 }
