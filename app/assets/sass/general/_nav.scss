@@ -1,0 +1,13 @@
+.body,
+.nav,
+.header__primary {
+  transition: 0.3s transform ease-in-out;
+
+  body.has-open-nav & {
+    transform: translateY(var(--headerHeight));
+
+    @include breakpoint(40rem) {
+      transform: none;
+    }
+  }
+}

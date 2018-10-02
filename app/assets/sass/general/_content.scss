@@ -22,11 +22,15 @@ $debug: false;
       // @todo make sure this works without a feature image
       margin-bottom: -0.55em;
 
-      font-size: 4em;
+      font-size: 10vw;
       line-height: 1;
       text-transform: uppercase;
       color: black;
       word-spacing: 0.2em;
+
+      @include breakpoint(40rem) {
+        font-size: 4em;
+      }
 
       // This applies the white space around the text. It's a weird hack
       span {

@@ -1,57 +1,105 @@
 .header {
-  padding-top: $space * 3;
-  padding-bottom: $space * 2;
+  display: flex;
+  flex-direction: column;
+
+  @include breakpoint(40rem) {
+    padding-top:    $space * 3;
+    padding-right:  $space * 2;
+    padding-bottom: $space * 2;
+    padding-left:   $space * 2;
+
+    flex-direction: row;
+
+    max-width: 60rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
-  .logo {
-    display: block;
-    margin: -3.5% 0 0.1em;
-    color: #000;
-    max-width: 400px;
+  .header__primary {
+    order: 2;
+    padding: $space;
 
-    &:hover {
-      border-bottom: none;
-      color: #444;
-      text-decoration: none;
-    }
-
-    .logo__img {
-      max-width: 100%;
+    @include breakpoint(40rem) {
+      order: unset;
+      padding: unset;
     }
   }
 
-  .nav {
-    display: flex;
-    flex-direction: column;
-    margin-top: $space;
+    .logo {
+      display: block;
+      color: #000;
+      max-width: 50vw;
 
-    @include breakpoint(840px) {
-      margin-top: 0;
-      flex-direction: row;
-      align-items: flex-start;
+      @include breakpoint(40rem) {
+        max-width: 400px;
+      }
+
+      &:hover {
+        border-bottom: none;
+        color: #444;
+        text-decoration: none;
+      }
+
+      .logo__img {
+        max-width: 100%;
+        margin: 0;
+
+        // This offsets the top of the "t" and "d"
+        margin-top: -3.5%;
+      }
+    }
+
+  .header__nav {
+    display: flex;
+    max-height: 0;
+    align-items: flex-end;
+
+    @include breakpoint(40rem) {
+      max-height: auto;
       justify-content: flex-end;
     }
   }
 
-    .nav__link {
-      border-bottom: 2px solid transparent;
-      padding-top: 0;
-      padding-bottom: 0.5em;
-      color: #333;
-      margin-top: $space * 0.5;
-      font: 14pt bold $font__family--alt;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      line-height: 1;
-      padding-left: 2px;
+    .nav {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
 
-      @include breakpoint(840px) {
+      background: #444;
+      color: white;
+
+      @include breakpoint(40rem) {
         margin-top: 0;
-        margin-left: $space * 1.25;
-      }
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-end;
 
-      &:hover {
-        color: rgba(black, 0.5);
-        border-color: rgba(black, 0.4);
+        background: unset;
+        color: unset;
       }
     }
+
+      .nav__link {
+        border-bottom: 2px solid transparent;
+        padding-top: 0;
+        padding-bottom: 0.5em;
+        color: currentcolor;
+        margin-top: $space * 0.5;
+        font: 14pt bold $font__family--alt;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        line-height: 1;
+        padding-left: 2px;
+
+        @include breakpoint(840px) {
+          margin-top: 0;
+          margin-left: $space * 1.25;
+        }
+
+        &:hover {
+          color: rgba(black, 0.5);
+          border-color: rgba(black, 0.4);
+        }
+      }
