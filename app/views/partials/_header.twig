@@ -1,10 +1,12 @@
-<header class="grid header">
-    <div class="col-5">
+<header class="header">
+    <div class="header__primary">
         <a href="/" class="logo">{% include 'partials/svgs/_logo.svg.twig' %}</a>
     </div>
-    <nav class="col-7 nav">
-        {% for item in menu.primary.items %}
-            <a href="{{ item.link }}" class="nav__link">{{ item.title }}</a>
-        {% endfor %}
-    </nav>
+    <div class="header__nav">
+        <nav class="nav">
+            {% for item in menu.primary.items %}
+                <a href="{{ item.link }}" class="nav__link">{{ item.title }}</a>
+            {% endfor %}
+        </nav>
+    </div>
 </header>

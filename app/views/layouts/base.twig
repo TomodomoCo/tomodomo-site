@@ -2,15 +2,13 @@
 <html lang="en">
 {% include 'partials/_head.twig' %}
 <body id="top">
-    <div class="body">
-        {% include 'partials/_header.twig' %}
+    {% include 'partials/_header.twig' %}
 
-        <main>
-            {% block content %}{% endblock %}
-        </main>
-
-        {% include 'partials/_footer.twig' %}
+    <main class="body">
+        {% block content %}{% endblock %}
     </div>
+
+    {% include 'partials/_footer.twig' %}
     {{wp_footer}}
 </body>
 </html>

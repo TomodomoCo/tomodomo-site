@@ -12,10 +12,10 @@
                 <div class="content__image" style="background-image: url({{image}});"></div>
             </div>
 
-            <div class="content__subhead">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse gravida elit vel massa consequat, posuere sodales nisi dictum. Integer pellentesque, orci at condimentum suscipit, ligula leo iaculis risus, mattis vestibulum risus sapien eget lacus. Donec ultrices volutpat nisl a sagittis.</p>
-            </div>
             {% if post.excerpt %}
+            <div class="content__subhead">
+                {{post.excerpt}}
+            </div>
             {% endif %}
         </header>
         <div class="content__body entry-content" itemprop="articleBody">
