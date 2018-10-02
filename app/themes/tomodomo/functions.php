@@ -4,6 +4,7 @@ namespace Tomodomo\Theme;
 
 use Tomodomo\Models\Menu;
 use Tomodomo\WpAssetRegistrar\Registrar;
+use function Stringy\create as s;
 
 /**
  * Add theme support
@@ -84,11 +85,17 @@ add_filter('theme_page_templates', function (array $templates) {
 /**
  * Handle asset registration
  */
-$registrar = new Registrar();
+$registrar = new Registrar([
+    'urlPath' => '/',
+]);
 
 add_action('wp_enqueue_scripts', function () use ($registrar) {
     $registrar->addStyle('tomodomo-css', 'assets/css/style.css');
-    $registrar->addScript('tomodomo-js', 'assets/js/script.js');
+    $registrar->addScript('tomodomo-js', 'assets/js/script.js', [
+        'dependencies' => [
+            'jquery',
+        ],
+    ]);
 
     return;
 });
@@ -105,3 +112,20 @@ add_action('wp_enqueue_block_editor_assets', function () use ($registrar) {
 
     return;
 });
+
+/**
+ * Make an asset URL relative
+ *
+ * @param string $input
+ *
+ * @return string
+ */
+function relativeAssetUrl(string $input) {
+    // Remove the home_url if set
+    $result = (string) s($input)->removeLeft(untrailingslashit(home_url()));
+
+    return $result;
+}
+
+add_filter('script_loader_src', __NAMESPACE__ . '\\relativeAssetUrl');
+add_filter('style_loader_src',  __NAMESPACE__ . '\\relativeAssetUrl');

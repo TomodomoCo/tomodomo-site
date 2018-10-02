@@ -67,7 +67,8 @@
     "tomodomo/block-columns": "dev-master",
     "tomodomo/theme": "*@dev",
     "tomodomo/wp-asset-registrar": "*@dev",
-    "tomodomo/block-logos": "*@dev"
+    "tomodomo/block-logos": "*@dev",
+    "danielstjules/stringy": "^3.1"
   },
   "require-dev": {
     "dealerdirect/phpcodesniffer-composer-installer": "^0.4.4",

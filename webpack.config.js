@@ -14,6 +14,9 @@ const config = {
       },
     ],
   },
+  externals: {
+    jquery: 'jQuery',
+  },
   output: {
     filename: 'script.js',
   },
