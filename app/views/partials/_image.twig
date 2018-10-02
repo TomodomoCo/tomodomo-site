@@ -1,8 +1,0 @@
-{% if type == 'svg' %}
-	{% include path ~ '_' ~ file ~ '.svg.twig' with {
-		width: width,
-		classes: classes,
-	} %}
-{% else %}
-<img src="https://tomodomo.imgix.net/{{path|default('assets/img/')}}{{file}}?bri={{bri|default('100')}}" width="{{ width|default('170') }}" alt="{{alt}}" {% if classes %}class="{{classes|join(' ')}}"{% endif %}>
-{% endif %}
