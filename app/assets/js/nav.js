@@ -11,3 +11,7 @@ const observer = new ResizeObserver((items, observer) => {
 })
 
 observer.observe(document.querySelectorAll('.header__nav > .nav')[0])
+
+jQuery('.js-toggle-nav').on('click', function () {
+  jQuery('body').toggleClass('has-open-nav')
+})

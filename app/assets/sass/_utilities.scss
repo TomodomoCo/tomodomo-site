@@ -119,15 +119,11 @@
 	border-radius: $border__radius;
 }
 
-.u--pull-right {
-	width: 100%;
-
-	float: right;
-	margin-right: calc( -50% - 1rem );
-	margin-left: $space;
-}
-
 .u--shadow {
   @include shadow(black);
   background: white;
+}
+
+.u-d--n {
+  display: none !important;
 }
