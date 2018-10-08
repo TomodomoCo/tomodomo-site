@@ -1,25 +1,20 @@
 <?php
 
-// Get the directory
-$dir = dirname(__FILE__);
+$dir = __DIR__;
 
-/**
- * Require the Composer autoloader
- */
-require_once("{$dir}/../vendor/composer/autoload.php");
+// Load the Composer autoloader if it's not loaded
+if (!class_exists('Composer\\Autoload\\ClassLoader')) {
+    require "{$dri}/../vendor/composer/autoload.php";
+}
 
-
-/**
- * Setup the YAML parser, load some yaml files
- */
+// Setup the YAML parser, load some yaml files
 use Symfony\Component\Yaml\Parser;
+
 $yaml     = new Parser();
 $project  = $yaml->parse(file_get_contents("{$dir}/../config/project.yml"));
 $database = $yaml->parse(file_get_contents("{$dir}/../config/secrets/database.yml"));
 
-/**
- * Throw an error if things break
- */
+// Throw an error if things break
 $failure_message = <<<EOT
 <html>
     <head><title>Sorry!</title></head>
