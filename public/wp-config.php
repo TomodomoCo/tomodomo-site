@@ -4,7 +4,7 @@ $dir = __DIR__;
 
 // Load the Composer autoloader if it's not loaded
 if (!class_exists('Composer\\Autoload\\ClassLoader')) {
-    require "{$dri}/../vendor/composer/autoload.php";
+    require "{$dir}/../vendor/composer/autoload.php";
 }
 
 // Setup the YAML parser, load some yaml files
