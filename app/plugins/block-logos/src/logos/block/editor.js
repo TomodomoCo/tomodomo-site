@@ -7,15 +7,21 @@ import { sum } from 'lodash'
 /**
  * WordPress Dependencies
  */
-import { __ } from '@wordpress/i18n'
-import { Placeholder } from '@wordpress/components'
-import { InnerBlocks } from '@wordpress/editor'
+import { createBlock } from '@wordpress/blocks'
+import {
+  Placeholder,
+  Toolbar,
+} from '@wordpress/components'
+import {
+  dispatch,
+  select,
+} from '@wordpress/data'
+import {
+  BlockControls,
+  InnerBlocks,
+} from '@wordpress/editor'
 import { Fragment } from '@wordpress/element'
-
-/**
- * Internal Dependencies
- */
-import Inspector from '../block/inspector'
+import { __ } from '@wordpress/i18n'
 
 /**
  * Block edit component
@@ -23,23 +29,45 @@ import Inspector from '../block/inspector'
 const Editor = (props) => {
   // Variables
   const {
-    attributes: {
-      logos,
-    },
     className,
+    clientId,
   } = props
 
   const classes = classnames(
     className,
     `logos`,
-    `has-${logos.length}-logos`,
   )
 
+  const onAdd = () => {
+    // Create a new logo block
+    let newLogo = createBlock('tomodomo/logo')
+
+    // Get the parent block
+    let parent = select('core/editor').getBlock(clientId)
+
+    // Insert the block at the end
+    dispatch('core/editor').insertBlock(newLogo, parent.innerBlocks.length + 1, clientId)
+  }
+
+  const isEmpty = () => {
+    let block = select('core/editor').getBlock(clientId)
+
+    return (block.innerBlocks.length < 1) ? true : false
+  }
+
   // UI for logos without any logos
-  if (logos.length === 0 && sum(logos) < 1) {
+  if (isEmpty()) {
     return (
       <Fragment>
-        <Inspector {...{ ...props }} />
+        <BlockControls>
+          <Toolbar controls={[
+            {
+              icon: 'plus-alt',
+              onClick: onAdd,
+              title: 'Add logo',
+            },
+          ]} />
+        </BlockControls>
         <Placeholder
           key='tomodomo-block-logos__placeholder'
           icon='logos'
@@ -53,7 +81,15 @@ const Editor = (props) => {
   // UI for logos with layout
   return (
     <Fragment>
-      <Inspector {...{ ...props }} />
+      <BlockControls>
+        <Toolbar controls={[
+          {
+            icon: 'plus-alt',
+            onClick: onAdd,
+            title: 'Add logo',
+          },
+        ]} />
+      </BlockControls>
       <div className={classes}>
         <InnerBlocks
           allowedBlocks={[

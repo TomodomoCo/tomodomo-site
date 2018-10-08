@@ -8,7 +8,16 @@ import classnames from 'classnames'
  */
 import { __ } from '@wordpress/i18n'
 import {
-  InnerBlocks,
+  TextControl,
+  Toolbar,
+} from '@wordpress/components'
+import {
+  dispatch,
+  select,
+} from '@wordpress/data'
+import {
+  BlockControls,
+  ColorPalette,
   withColors,
   getColorClassName,
 } from '@wordpress/editor'
@@ -17,7 +26,8 @@ import { Fragment } from '@wordpress/element'
 /**
  * Internal Dependencies
  */
-import Inspector from '../block/inspector'
+import DropdownButton from '../../components/dropdown-button'
+import Inspector from './inspector'
 
 /**
  * Block edit component
@@ -25,27 +35,56 @@ import Inspector from '../block/inspector'
 const Editor = withColors('backgroundColor')((props) => {
   // Variables
   const {
-    attributes: {
-      backgroundColor,
-    },
+    backgroundColor,
     className,
+    clientId,
+    setBackgroundColor,
   } = props
 
   const classes = classnames(
     className,
     `logos__logo`,
-    getColorClassName('background', backgroundColor),
+    getColorClassName('background-color', backgroundColor.slug),
   )
+
+  const onDelete = () => {
+    dispatch('core/editor').removeBlock(clientId, false)
+  }
 
   // UI for columns with layout
   return (
     <Fragment>
       <Inspector {...{ ...props }} />
+      <BlockControls>
+        <Toolbar>
+          <DropdownButton
+            icon="admin-appearance"
+            title="Choose background color"
+            buttonProps={{
+              style: {
+                color: backgroundColor.color,
+              }
+            }}
+            renderContent={() => {
+              return (
+                <ColorPalette
+                  onChange={setBackgroundColor}
+                  value={backgroundColor.color}
+                />
+              )
+            }}
+          />
+        </Toolbar>
+        <Toolbar controls={[
+          {
+            icon: 'trash',
+            onClick: onDelete,
+            title: 'Delete',
+          },
+        ]} />
+      </BlockControls>
       <div className={classes}>
-        <InnerBlocks
-          allowedBlocks="all"
-          templateLock={false}
-        />
+        {'Hi'}
       </div>
     </Fragment>
   )

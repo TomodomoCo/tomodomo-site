@@ -22,7 +22,7 @@ const Renderer = (props) => {
   const classes = classnames(
     className,
     'grid',
-    `has-${logos.length}-logos`,
+    `has-${logos}-logos`,
   )
 
   // UI

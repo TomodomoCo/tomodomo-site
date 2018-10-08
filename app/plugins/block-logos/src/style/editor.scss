@@ -1,15 +1,38 @@
-.wp-block-tomodomo-logos {
-  & > .editor-inner-blocks > .editor-block-list__layout {
+
+.editor-block-list__block[data-type="tomodomo/logos"],
+.editor-block-list__block[data-type="tomodomo/logo"] {
+}
+
+// Handle the parent logos block
+.editor-block-list__block[data-type="tomodomo/logos"] {
+  .wp-block-tomodomo-logos > .editor-inner-blocks > .editor-block-list__layout {
     display: flex;
+    flex-wrap: wrap;
+  }
+}
 
-    & > .editor-block-list__block {
-      flex: 1;
-      padding: 10px;
-      background: red;
+// Handle the individual logo block
+.editor-block-list__block[data-type="tomodomo/logo"] {
+  flex-grow: 1;
+  width: 25%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  max-width: unset !important;
 
-      &:nth-child(even) {
-        background: blue;
-      }
-    }
+  & > .editor-block-list__block-edit {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+
+.components-popover__content {
+  .components-color-palette {
+    padding: 10px;
+  }
+
+  .components-color-palette__clear {
+    float: none;
+    margin: none;
   }
 }

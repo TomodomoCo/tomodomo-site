@@ -34,9 +34,17 @@ const Inspector = (props) => {
   // Inspector Controls
   return (
     <InspectorControls>
-      <PanelColor title={__('Background Color')} colorValue={backgroundColor.value} colorName={backgroundColor.name}>
-        <ColorPalette onChange={setBackgroundColor} value={backgroundColor.value} />
-      </PanelColor>
+      <PanelColorSettings
+        title={ __( 'Color Settings' ) }
+        initialOpen={ false }
+        colorSettings={ [
+          {
+            value: backgroundColor.color,
+            onChange: setBackgroundColor,
+            label: __( 'Background Color' ),
+          },
+        ] }
+      />
     </InspectorControls>
   )
 }

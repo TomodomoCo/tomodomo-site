@@ -27,12 +27,7 @@ var settings = {
     src: 'columns',
   },
   category: 'layout',
-  attributes: {
-    logos: {
-      type: 'array',
-      default: [],
-    },
-  },
+  attributes: {},
   edit: Editor,
   save: Renderer,
   supports: {
