@@ -120,7 +120,15 @@ add_action('wp_enqueue_block_editor_assets', function () use ($registrar) {
  *
  * @return string
  */
-function relativeAssetUrl(string $input) {
+function relativeAssetUrl($input) {
+    if (is_admin()) {
+        return $input;
+    }
+
+    if ($input === null) {
+        return $input;
+    }
+
     // Remove the home_url if set
     $result = (string) s($input)->removeLeft(untrailingslashit(home_url()));
 
