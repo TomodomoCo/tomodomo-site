@@ -25,17 +25,24 @@ class SvgController extends BaseController
         $params  = $request->getQueryParams();
         $svgArgs = [];
 
-        if (isset($params['width'])) {
+        if (isset($params['width']) && !empty($params['width'])) {
             $svgArgs['width'] = intval($params['width']);
         }
 
-        if (isset($params['width']) && isset($params['height'])) {
+        if (isset($params['width']) && isset($params['height']) && !empty($params['height'])) {
             $svgArgs['height'] = intval($params['height']);
         }
 
-        if (isset($params['fill'])) {
+        if (isset($params['fill']) && !empty($params['fill'])) {
+            // Can't use a hash mark in a query parameter, so we add it in
+            if (strlen($params['fill']) < 7) {
+                $params['fill'] = "#{$params['fill']}";
+            }
+
             $svgArgs['fill'] = esc_attr($params['fill']);
         }
+
+        $response = $response->withHeader('Content-Type', 'image/svg+xml');
 
         return $this->twig->render($response, $path, $svgArgs);
     }
