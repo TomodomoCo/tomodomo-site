@@ -1,21 +1,22 @@
 %control--base {
 	width: 100%;
-	border-radius: 3px;
 	font-size: 0.9em;
 	padding: 0.5em 0.7em;
 	font-family: $font__family--native;
-	border: 1px solid #EFEFEF;
+	border: 2px solid #EFEFEF;
 }
 
 %control--text {
 	@extend %control--base;
 	background: white;
-	box-shadow: 0 5px 8px -8px rgba(black, 0.4), 0 1px 1px rgba(black, 0.05);
 
-	&:focus, &:active {
+  &:focus, &:active {
 		outline: none;
-		box-shadow: 0 0 1px 1px lighten(desaturate(blue, 40%), 40%);
-		border-color: lighten(desaturate(blue, 40%), 40%);
+  }
+
+	&:focus {
+		box-shadow: 0 0 0 5px $color__input--focus, 5px 5px 0 5px $color__input--focus;
+		border-color: transparent;
 	}
 }
 
@@ -29,16 +30,16 @@
 %control--label {
 	display: block;
 	margin-bottom: 0.4em;
-	font-size: 10.5pt;
+	font-size: 12pt;
 	font-family: $font__family--alt;
 	text-transform: uppercase;
 	letter-spacing: 2px;
-	font-weight: bold;
+	font-weight: 400;
 }
 
 	label {
 		@extend %control--label;
-		color: #888;
+		color: #555;
 	}
 
 %control--button {

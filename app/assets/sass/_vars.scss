@@ -25,5 +25,7 @@ $color__link: desaturate(darken(blue, 5%), 25%);
 
 $color__table--border: rgba(black, 0.1);
 
+$color__input--focus: rgba(desaturate(blue, 40%), 0.1);
+
 // Generics
 $border__radius: 5px;
