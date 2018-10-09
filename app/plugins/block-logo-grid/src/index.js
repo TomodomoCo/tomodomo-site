@@ -2,4 +2,4 @@
  * Internal dependencies
  */
 import './logo-grid'
-import './logo'
+import './logo-grid-logo'

@@ -12,6 +12,10 @@
     flex-grow: 1;
     padding: 4vmax;
 
+    height: 25vh;
+    min-height: 10rem;
+    max-height: 18rem;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -24,7 +28,8 @@
       width: 25%;
     }
 
-    img {
+    img,
+    svg {
       max-width: 12em;
       width: 100%;
     }

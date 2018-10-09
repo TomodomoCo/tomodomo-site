@@ -8,6 +8,7 @@ import classnames from 'classnames'
  */
 import { __ } from '@wordpress/i18n'
 import {
+  ServerSideRender,
   TextControl,
   Toolbar,
 } from '@wordpress/components'
@@ -37,7 +38,8 @@ const Editor = withColors('backgroundColor')((props) => {
   const {
     attributes: {
       customBackgroundColor,
-      imageUrl,
+      svgName,
+      svgParams,
     },
     backgroundColor,
     className,
@@ -97,7 +99,13 @@ const Editor = withColors('backgroundColor')((props) => {
         className={classes}
         style={style}
       >
-        <img src={imageUrl} />
+        <ServerSideRender
+          block="tomodomo/logo-grid-logo"
+          attributes={{
+            svgName,
+            svgParams,
+          }}
+        />
       </div>
     </Fragment>
   )

@@ -40,7 +40,7 @@ const Editor = (props) => {
 
   const onAdd = () => {
     // Create a new logo block
-    let newLogo = createBlock('tomodomo/logo')
+    let newLogo = createBlock('tomodomo/logo-grid-logo')
 
     // Get the parent block
     let parent = select('core/editor').getBlock(clientId)

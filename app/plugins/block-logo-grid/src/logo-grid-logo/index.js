@@ -29,7 +29,11 @@ var settings = {
     customBackgroundColor: {
       type: 'string',
     },
-    imageUrl: {
+    svgName: {
+      type: 'string',
+      default: '',
+    },
+    svgParams: {
       type: 'string',
       default: '',
     },
@@ -45,4 +49,4 @@ var settings = {
 /**
  * Register block
  */
-registerBlockType('tomodomo/logo', settings)
+registerBlockType('tomodomo/logo-grid-logo', settings)

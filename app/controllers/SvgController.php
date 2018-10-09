@@ -2,6 +2,8 @@
 
 namespace Tomodomo\Controllers;
 
+use Tomodomo\Helpers\Svg;
+
 class SvgController extends BaseController
 {
     /**
@@ -23,27 +25,7 @@ class SvgController extends BaseController
 
         // Build SVG args
         $params  = $request->getQueryParams();
-        $svgArgs = [];
-
-        if (isset($params['width']) && !empty($params['width'])) {
-            $svgArgs['width'] = intval($params['width']);
-        }
-
-        if (isset($params['width']) && isset($params['height']) && !empty($params['height'])) {
-            $svgArgs['height'] = intval($params['height']);
-        }
-
-        if (isset($params['fill']) && !empty($params['fill'])) {
-            // Check if we were passed a hex-style value
-            $fillIsHex = boolval(preg_match('/([a-f0-9]{3}){1,2}\b/i', $params['fill']));
-
-            // Can't use a hash mark in a query parameter, so we add it in
-            if ($fillIsHex) {
-                $params['fill'] = "#{$params['fill']}";
-            }
-
-            $svgArgs['fill'] = esc_attr($params['fill']);
-        }
+        $svgArgs = Svg::getArgsFromParams($params);
 
         $response = $response->withHeader('Content-Type', 'image/svg+xml');
 

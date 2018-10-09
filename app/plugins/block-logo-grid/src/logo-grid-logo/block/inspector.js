@@ -25,7 +25,9 @@ import { __ } from '@wordpress/i18n'
 const Inspector = (props) => {
   const {
     attributes: {
-      imageUrl,
+      link,
+      svgName,
+      svgParams,
     },
     backgroundColor,
     setAttributes,
@@ -37,10 +39,25 @@ const Inspector = (props) => {
     <InspectorControls>
       <PanelBody title="Test">
         <TextControl
-          label={__('Image URL')}
-          value={imageUrl}
-          onChange={(imageUrl) => {
-            setAttributes({imageUrl})
+          label={__('SVG Name')}
+          value={svgName}
+          onChange={(svgName) => {
+            setAttributes({svgName})
+          }}
+        />
+        <TextControl
+          label={__('SVG Parameters')}
+          help={__('Use the PHP query string format.')}
+          value={svgParams}
+          onChange={(svgParams) => {
+            setAttributes({svgParams})
+          }}
+        />
+        <TextControl
+          label={__('Link')}
+          value={link}
+          onChange={(link) => {
+            setAttributes({link})
           }}
         />
       </PanelBody>

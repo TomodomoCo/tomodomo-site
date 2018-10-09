@@ -2,5 +2,8 @@
 
 namespace Tomodomo\Gutenberg\Block;
 
-$block = new LogosBlock();
+$block = new LogoGridBlock();
+$block->init();
+
+$block = new LogoGridLogoBlock();
 $block->init();
