@@ -1,5 +1,5 @@
 /**
  * Internal dependencies
  */
-import './logos'
+import './logo-grid'
 import './logo'

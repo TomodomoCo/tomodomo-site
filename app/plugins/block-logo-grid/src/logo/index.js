@@ -14,7 +14,7 @@ import Renderer from './block/renderer'
 var settings = {
   title: __('Logo'),
   parent: [
-    'tomodomo/logos'
+    'tomodomo/logo-grid'
   ],
   icon: 'columns',
   description: __('A single logo within the grid of logos.'),

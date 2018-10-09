@@ -50,7 +50,7 @@ const Editor = withColors('backgroundColor')((props) => {
   const classes = classnames({
     [backgroundClass]: backgroundClass,
     [className]: true,
-    'logos__logo': true,
+    'logo-grid__logo': true,
   })
 
   const style = {

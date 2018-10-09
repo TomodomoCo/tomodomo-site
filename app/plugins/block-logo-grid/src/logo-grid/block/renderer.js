@@ -21,7 +21,7 @@ const Renderer = (props) => {
 
   const classes = classnames({
     [className]: className,
-    'logos': true,
+    'logo-grid': true,
   })
 
   // UI

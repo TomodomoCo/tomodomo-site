@@ -1,5 +1,5 @@
 {
-  "name": "tomodomo/block-logos",
+  "name": "tomodomo/block-logo-grid",
   "description": "Gutenberg block for creating a grid of logos",
   "type": "wordpress-plugin",
   "license": "MIT",
@@ -15,7 +15,7 @@
     "sort-packages": true
   },
   "extra": {
-    "installer-name": "tomodomo-block-logos"
+    "installer-name": "tomodomo-block-logo-grid"
   },
   "require": {
     "php": "^7.0",

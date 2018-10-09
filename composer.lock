@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "1ea6ccf3dcbb2f75218b9a0e4825a437",
+    "content-hash": "2c4b7c759c9f1ec1d0d90ddf3b9f04d2",
     "packages": [
         {
             "name": "altorouter/altorouter",
@@ -1017,16 +1017,16 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v2.8.45",
+            "version": "v2.8.46",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "fbf876678e29dc634430dcf0096e216eb0004467"
+                "reference": "5baf0f821b14eee8ca415e6a0361a9fa140c002c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/fbf876678e29dc634430dcf0096e216eb0004467",
-                "reference": "fbf876678e29dc634430dcf0096e216eb0004467",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/5baf0f821b14eee8ca415e6a0361a9fa140c002c",
+                "reference": "5baf0f821b14eee8ca415e6a0361a9fa140c002c",
                 "shasum": ""
             },
             "require": {
@@ -1063,20 +1063,20 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2018-07-26T09:03:18+00:00"
+            "time": "2018-08-29T13:11:53+00:00"
         },
         {
             "name": "timber/timber",
-            "version": "1.8.0",
+            "version": "1.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/timber/timber.git",
-                "reference": "2a5b709b5881fdc2e07df6134fbb4ff144280e5c"
+                "reference": "51314124b9608de85dc0400c9a2c71caf336eb6c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/timber/timber/zipball/2a5b709b5881fdc2e07df6134fbb4ff144280e5c",
-                "reference": "2a5b709b5881fdc2e07df6134fbb4ff144280e5c",
+                "url": "https://api.github.com/repos/timber/timber/zipball/51314124b9608de85dc0400c9a2c71caf336eb6c",
+                "reference": "51314124b9608de85dc0400c9a2c71caf336eb6c",
                 "shasum": ""
             },
             "require": {
@@ -1088,8 +1088,8 @@
             },
             "require-dev": {
                 "johnpbloch/wordpress": "4.*",
-                "phpunit/phpunit": "5.7.16",
-                "wpackagist-plugin/advanced-custom-fields": "4.4.*",
+                "phpunit/phpunit": "5.7.16|6.*",
+                "wpackagist-plugin/advanced-custom-fields": "5.*",
                 "wpackagist-plugin/co-authors-plus": "3.2.*"
             },
             "suggest": {
@@ -1125,7 +1125,7 @@
                 "timber",
                 "twig"
             ],
-            "time": "2018-09-17T17:02:34+00:00"
+            "time": "2018-09-30T14:50:29+00:00"
         },
         {
             "name": "tomodomo/block-columns",
@@ -1165,12 +1165,12 @@
             "time": "2018-09-26T19:46:01+00:00"
         },
         {
-            "name": "tomodomo/block-logos",
+            "name": "tomodomo/block-logo-grid",
             "version": "dev-dev",
             "dist": {
                 "type": "path",
-                "url": "./app/plugins/block-logos",
-                "reference": "6974f97fa6bf30c0794b75f75908f65341e10f04",
+                "url": "./app/plugins/block-logo-grid",
+                "reference": "4a6d3afcc8ccf5bb3fc6bc4d12843add03a527e9",
                 "shasum": null
             },
             "require": {
@@ -1179,7 +1179,7 @@
             },
             "type": "wordpress-plugin",
             "extra": {
-                "installer-name": "tomodomo-block-logos"
+                "installer-name": "tomodomo-block-logo-grid"
             },
             "autoload": {
                 "psr-4": {
@@ -1598,20 +1598,6 @@
             "time": "2017-12-06T16:27:17+00:00"
         },
         {
-            "name": "deliciousbrains-plugin/wp-migrate-db-pro",
-            "version": "1.8.4",
-            "dist": {
-                "type": "zip",
-                "url": "https://api.deliciousbrains.com/?wc-api=delicious-brains&request=composer_download&package=wp-migrate-db-pro&version=1.8.4&composer_key=6B50E72FA00FCE3A440C632FB3E354A0",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin"
-        },
-        {
             "name": "giacocorsiglia/wordpress-stubs",
             "version": "v4.9.8",
             "source": {
@@ -2001,16 +1987,16 @@
         },
         {
             "name": "vimeo/psalm",
-            "version": "2.0.12",
+            "version": "2.0.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vimeo/psalm.git",
-                "reference": "db3ddaa42cbc81ffb6f9f8290d01c4db6dbbc3e6"
+                "reference": "afebefba19ca8c604f5c2fbc5ede44f4c12e853b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vimeo/psalm/zipball/db3ddaa42cbc81ffb6f9f8290d01c4db6dbbc3e6",
-                "reference": "db3ddaa42cbc81ffb6f9f8290d01c4db6dbbc3e6",
+                "url": "https://api.github.com/repos/vimeo/psalm/zipball/afebefba19ca8c604f5c2fbc5ede44f4c12e853b",
+                "reference": "afebefba19ca8c604f5c2fbc5ede44f4c12e853b",
                 "shasum": ""
             },
             "require": {
@@ -2064,7 +2050,7 @@
                 "inspection",
                 "php"
             ],
-            "time": "2018-09-21T15:35:51+00:00"
+            "time": "2018-10-07T04:42:25+00:00"
         },
         {
             "name": "wimg/php-compatibility",
@@ -2267,7 +2253,7 @@
         "tomodomo/block-columns": 20,
         "tomodomo/theme": 20,
         "tomodomo/wp-asset-registrar": 20,
-        "tomodomo/block-logos": 20
+        "tomodomo/block-logo-grid": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

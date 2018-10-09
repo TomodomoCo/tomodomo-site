@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Tomodomo › Gutenberg › Logos Block
+ * Plugin Name: Tomodomo › Gutenberg › Logo Grid Block
  * Plugin URI: https://tomodomo.co/
  * Version: 1.0.0
  * Description: Gutenberg block for creating a grid of logos

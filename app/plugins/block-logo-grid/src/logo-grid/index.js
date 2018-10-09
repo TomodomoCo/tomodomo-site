@@ -13,7 +13,7 @@ import '../style/style.scss'
 import '../style/editor.scss'
 
 var settings = {
-  title: __('Logos'),
+  title: __('Logo Grid'),
   description: __(
     'Insert a grid of logos.'
   ),
@@ -45,4 +45,4 @@ var settings = {
 /**
  * Register block
  */
-registerBlockType('tomodomo/logos', settings)
+registerBlockType('tomodomo/logo-grid', settings)

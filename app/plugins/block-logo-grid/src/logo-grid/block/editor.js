@@ -69,7 +69,7 @@ const Editor = (props) => {
           ]} />
         </BlockControls>
         <Placeholder
-          key='tomodomo-block-logos__placeholder'
+          key='tomodomo-block-logo-grid__placeholder'
           icon='logos'
           label={__('Logos')}
           instructions={__('Add your first logo to this grid')}

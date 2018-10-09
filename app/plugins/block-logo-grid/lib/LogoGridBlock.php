@@ -4,7 +4,7 @@ namespace Tomodomo\Gutenberg\Block;
 
 use Tomodomo\WpAssetRegistrar\Registrar;
 
-class LogosBlock
+class LogoGridBlock
 {
     /**
      * Initialise the plugin
@@ -31,15 +31,15 @@ class LogosBlock
         }
 
         // Handle asset enqueues
-		$args = [
-			'basePath' => trailingslashit(dirname(__DIR__)) . 'build/',
-			'urlPath'  => '/content/plugins/tomodomo-block-logos/build/',
-		];
+        $args = [
+            'basePath' => trailingslashit(dirname(__DIR__)) . 'build/',
+            'urlPath'  => '/content/plugins/tomodomo-block-logo-grid/build/',
+        ];
 
         $registrar = new Registrar($args);
 
         // Enqueue editor JS
-        $registrar->addScript('tomodomo-block-logos-js', 'script.js', [
+        $registrar->addScript('tomodomo-block-logo-grid-js', 'script.js', [
             'dependencies' => [
                 'wp-i18n',
                 'wp-blocks',
@@ -48,12 +48,12 @@ class LogosBlock
         ]);
 
         // Enqueue editor CSS
-        $registrar->addStyle('tomodomo-block-logos-css', 'editor.css');
+        $registrar->addStyle('tomodomo-block-logo-grid-css', 'editor.css');
 
         // Register the block
-        register_block_type('tomodomo/logos', [
-            'editor_style'  => 'tomodomo-block-logos-css',
-            'editor_script' => 'tomodomo-block-logos-js',
+        register_block_type('tomodomo/logo-grid', [
+            'editor_style'  => 'tomodomo-block-logo-grid-css',
+            'editor_script' => 'tomodomo-block-logo-grid-js',
         ]);
 
         return;

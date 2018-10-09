@@ -29,7 +29,7 @@ const Renderer = (props) => {
   const classes = classnames({
     [backgroundClass]: backgroundClass,
     [className]: className,
-    'logos__logo': true,
+    'logo-grid__logo': true,
   })
 
   const style = {

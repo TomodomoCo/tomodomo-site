@@ -70,7 +70,7 @@
     "tomodomo/block-columns": "dev-master",
     "tomodomo/theme": "*@dev",
     "tomodomo/wp-asset-registrar": "*@dev",
-    "tomodomo/block-logos": "*@dev",
+    "tomodomo/block-logo-grid": "*@dev",
     "danielstjules/stringy": "^3.1",
     "rocketgenius/gravityforms": "2.3.4.1",
     "slim/slim": "^3.11",
