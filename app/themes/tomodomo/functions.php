@@ -62,25 +62,16 @@ function context($context)
 
 add_filter('timber/context', __NAMESPACE__ . '\\context');
 
-/*
-add_filter('Tomodomo\Kaiso\CustomTemplates', function (array $templates) {
-    $templates[] = [
-        'name' => 'Narrow Page Template',
+// Register virtual page templates for Kaiso
+\Tomodomo\Kaiso::registerTemplates([
+    [
+        'slug' => 'canvas',
+        'name' => 'Block Canvas',
         'postTypes' => [
-            'post',
             'page',
         ],
-    ];
-
-    return $templates;
-});
-
-add_filter('theme_page_templates', function (array $templates) {
-    return [
-        'template-test.php' => 'Test Template Test',
-    ];
-});
-*/
+    ],
+]);
 
 /**
  * Handle asset registration

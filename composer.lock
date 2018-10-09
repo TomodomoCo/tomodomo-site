@@ -1262,12 +1262,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/TomodomoCo/kaiso.git",
-                "reference": "e5cfbc92f918ddae3b13b847432ceec935199e55"
+                "reference": "d59ef05ae9203d158d6173aaf944875bc57c0477"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TomodomoCo/kaiso/zipball/e5cfbc92f918ddae3b13b847432ceec935199e55",
-                "reference": "e5cfbc92f918ddae3b13b847432ceec935199e55",
+                "url": "https://api.github.com/repos/TomodomoCo/kaiso/zipball/d59ef05ae9203d158d6173aaf944875bc57c0477",
+                "reference": "d59ef05ae9203d158d6173aaf944875bc57c0477",
                 "shasum": ""
             },
             "require": {
@@ -1302,7 +1302,7 @@
                 "source": "https://github.com/TomodomoCo/kaiso/tree/master",
                 "issues": "https://github.com/TomodomoCo/kaiso/issues"
             },
-            "time": "2018-08-14T00:09:35+00:00"
+            "time": "2018-10-09T20:37:17+00:00"
         },
         {
             "name": "tomodomo/theme",
@@ -1522,15 +1522,15 @@
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
-            "version": "8.3",
+            "version": "8.4",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
-                "reference": "tags/8.3"
+                "reference": "tags/8.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.8.3.zip",
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.8.4.zip",
                 "reference": null,
                 "shasum": null
             },

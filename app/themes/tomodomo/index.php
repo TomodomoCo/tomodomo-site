@@ -20,7 +20,6 @@ Timber::$locations = [
 // App settings. So far you only need to provide a controllerPath
 $settings = [
     'controllerPath' => '\\Tomodomo\\Controllers\\',
-    'customTemplates' => [],
 ];
 
 // Instantiate the app with our settingj
