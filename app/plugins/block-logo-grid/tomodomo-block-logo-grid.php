@@ -6,6 +6,9 @@
  * Description: Gutenberg block for creating a grid of logos
  * Author: Tomodomo
  * Author URI: https://tomodomo.co/
+ * Requires at least: 4.9.8
+ * Require PHP: 7.0
+ * License: MIT
  */
 
 // Potentially load the Composer autoloader

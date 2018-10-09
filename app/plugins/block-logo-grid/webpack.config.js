@@ -68,7 +68,7 @@ const config = {
   output: {
     filename: "build/script.js",
     path: __dirname,
-    library: ["myblock", "[name]"],
+    library: ["tomodomo-block-logo-grid", "[name]"],
     libraryTarget: "this"
   },
   resolve: {

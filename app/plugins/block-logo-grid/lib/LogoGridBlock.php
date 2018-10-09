@@ -33,7 +33,7 @@ class LogoGridBlock
         // Handle asset enqueues
         $args = [
             'basePath' => trailingslashit(dirname(__DIR__)) . 'build/',
-            'urlPath'  => '/content/plugins/tomodomo-block-logo-grid/build/',
+            'urlPath'  => trailingslashit(plugins_url('build', __DIR__)),
         ];
 
         $registrar = new Registrar($args);
