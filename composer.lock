@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "601abd5c9c42d1924427bacf0355a79b",
+    "content-hash": "8bff8853ea2db8d9d64ef9e3f3948787",
     "packages": [
         {
             "name": "altorouter/altorouter",
@@ -1190,20 +1190,28 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/TomodomoCo/gutenberg-block-columns.git",
-                "reference": "abac75076cec7fc157476180d4ae670d688ab29c"
+                "reference": "a867e0e58f263e5a1e219b8fb827d18098f92945"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TomodomoCo/gutenberg-block-columns/zipball/abac75076cec7fc157476180d4ae670d688ab29c",
-                "reference": "abac75076cec7fc157476180d4ae670d688ab29c",
+                "url": "https://api.github.com/repos/TomodomoCo/gutenberg-block-columns/zipball/a867e0e58f263e5a1e219b8fb827d18098f92945",
+                "reference": "a867e0e58f263e5a1e219b8fb827d18098f92945",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.0"
+                "php": "^7.0",
+                "tomodomo/wp-asset-registrar": "dev-master"
             },
             "type": "wordpress-plugin",
             "extra": {
                 "installer-name": "tomodomo-block-columns"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Tomodomo\\Gutenberg\\Block\\": [
+                        "lib/"
+                    ]
+                }
             },
             "license": [
                 "MIT"
@@ -1219,7 +1227,7 @@
                 "source": "https://github.com/TomodomoCo/gutenberg-block-columns/tree/master",
                 "issues": "https://github.com/TomodomoCo/gutenberg-block-columns/issues"
             },
-            "time": "2018-09-26T19:46:01+00:00"
+            "time": "2018-10-09T22:21:39+00:00"
         },
         {
             "name": "tomodomo/block-logo-grid",
@@ -1227,12 +1235,12 @@
             "dist": {
                 "type": "path",
                 "url": "./app/plugins/block-logo-grid",
-                "reference": "4a6d3afcc8ccf5bb3fc6bc4d12843add03a527e9",
+                "reference": "92272a4d8d8e3f42c0185a5a85de0928c35f7049",
                 "shasum": null
             },
             "require": {
                 "php": "^7.0",
-                "tomodomo/wp-asset-registrar": "*@dev"
+                "tomodomo/wp-asset-registrar": "dev-master"
             },
             "type": "wordpress-plugin",
             "extra": {
@@ -1333,12 +1341,17 @@
         },
         {
             "name": "tomodomo/wp-asset-registrar",
-            "version": "dev-dev",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/TomodomoCo/wp-asset-registrar.git",
+                "reference": "fc68c756f2e78bd87fd27efb9e6e654265ed0eb5"
+            },
             "dist": {
-                "type": "path",
-                "url": "./app/libraries/wp-asset-registrar",
-                "reference": "3d7df263e1cab68c5b62b69864cbcb2b8c71e234",
-                "shasum": null
+                "type": "zip",
+                "url": "https://api.github.com/repos/TomodomoCo/wp-asset-registrar/zipball/fc68c756f2e78bd87fd27efb9e6e654265ed0eb5",
+                "reference": "fc68c756f2e78bd87fd27efb9e6e654265ed0eb5",
+                "shasum": ""
             },
             "require": {
                 "php": "^7.0"
@@ -1360,7 +1373,12 @@
                     "email": "hello@tomodomo.co"
                 }
             ],
-            "description": "Object-oriented registration of CSS and JS assets for WordPress"
+            "description": "Object-oriented registration of CSS and JS assets for WordPress",
+            "support": {
+                "source": "https://github.com/TomodomoCo/wp-asset-registrar/tree/master",
+                "issues": "https://github.com/TomodomoCo/wp-asset-registrar/issues"
+            },
+            "time": "2018-10-09T22:11:56+00:00"
         },
         {
             "name": "twig/twig",

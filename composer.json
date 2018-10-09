@@ -44,6 +44,10 @@
     {
       "type": "vcs",
       "url": "https://github.com/tomodomoco/gutenberg-block-columns"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/tomodomoco/wp-asset-registrar"
     }
   ],
   "autoload": {
@@ -73,7 +77,7 @@
     "tomodomo/kaiso": "dev-master",
     "tomodomo/block-columns": "dev-master",
     "tomodomo/theme": "*@dev",
-    "tomodomo/wp-asset-registrar": "*@dev",
+    "tomodomo/wp-asset-registrar": "dev-master",
     "tomodomo/block-logo-grid": "*@dev",
     "danielstjules/stringy": "^3.1",
     "rocketgenius/gravityforms": "2.3.4.1",
