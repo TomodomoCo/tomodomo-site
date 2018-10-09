@@ -23,11 +23,17 @@ var settings = {
     inserter: false,
   },
   attributes: {
-    link: {
+    backgroundColor: {
+      type: 'string',
+    },
+    customBackgroundColor: {
+      type: 'string',
+    },
+    imageUrl: {
       type: 'string',
       default: '',
     },
-    backgroundColor: {
+    link: {
       type: 'string',
       default: '',
     },

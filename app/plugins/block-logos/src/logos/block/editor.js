@@ -95,7 +95,6 @@ const Editor = (props) => {
           allowedBlocks={[
             'tomodomo/logo',
           ]}
-          templateLock="all"
         />
       </div>
     </Fragment>

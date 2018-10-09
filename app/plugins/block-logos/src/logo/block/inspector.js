@@ -4,10 +4,7 @@
 import { createBlock } from '@wordpress/blocks'
 import {
   PanelBody,
-  Button,
-  IconButton,
-  BaseControl,
-  PanelColor,
+  TextControl,
 } from '@wordpress/components'
 import {
   dispatch,
@@ -16,8 +13,8 @@ import {
 import {
   ColorPalette,
   InspectorControls,
+  PanelColorSettings,
 } from '@wordpress/editor'
-import { Fragment } from '@wordpress/element'
 import { __ } from '@wordpress/i18n'
 
 /**
@@ -27,23 +24,36 @@ import { __ } from '@wordpress/i18n'
  */
 const Inspector = (props) => {
   const {
+    attributes: {
+      imageUrl,
+    },
     backgroundColor,
+    setAttributes,
     setBackgroundColor,
   } = props
 
   // Inspector Controls
   return (
     <InspectorControls>
+      <PanelBody title="Test">
+        <TextControl
+          label={__('Image URL')}
+          value={imageUrl}
+          onChange={(imageUrl) => {
+            setAttributes({imageUrl})
+          }}
+        />
+      </PanelBody>
       <PanelColorSettings
-        title={ __( 'Color Settings' ) }
-        initialOpen={ false }
-        colorSettings={ [
+        title={__('Color Settings')}
+        initialOpen={false}
+        colorSettings={[
           {
             value: backgroundColor.color,
             onChange: setBackgroundColor,
-            label: __( 'Background Color' ),
+            label: __('Background Color'),
           },
-        ] }
+        ]}
       />
     </InspectorControls>
   )

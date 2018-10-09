@@ -13,17 +13,16 @@ import { InnerBlocks } from '@wordpress/editor'
  */
 const Renderer = (props) => {
   const {
-    className,
     attributes: {
       logos,
     },
+    className,
   } = props
 
-  const classes = classnames(
-    className,
-    'grid',
-    `has-${logos}-logos`,
-  )
+  const classes = classnames({
+    [className]: className,
+    'logos': true,
+  })
 
   // UI
   return (

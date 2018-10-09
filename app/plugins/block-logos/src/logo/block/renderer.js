@@ -16,22 +16,33 @@ import {
  */
 const Renderer = (props) => {
   const {
-    className,
     attributes: {
       backgroundColor,
+      customBackgroundColor,
+      imageUrl,
     },
+    className,
   } = props
 
-  const classes = classnames(
-    className,
-    'logos__logo',
-    getColorClassName('background', backgroundColor),
-  )
+  const backgroundClass = getColorClassName('background-color', backgroundColor)
+
+  const classes = classnames({
+    [backgroundClass]: backgroundClass,
+    [className]: className,
+    'logos__logo': true,
+  })
+
+  const style = {
+    backgroundColor: backgroundClass ? undefined : customBackgroundColor,
+  }
 
   // UI
   return (
-    <div className={classes}>
-      <InnerBlocks.Content />
+    <div
+      className={classes}
+      style={style}
+    >
+      <img src={imageUrl} />
     </div>
   )
 }

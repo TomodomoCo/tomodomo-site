@@ -35,17 +35,27 @@ import Inspector from './inspector'
 const Editor = withColors('backgroundColor')((props) => {
   // Variables
   const {
+    attributes: {
+      customBackgroundColor,
+      imageUrl,
+    },
     backgroundColor,
     className,
     clientId,
     setBackgroundColor,
   } = props
 
-  const classes = classnames(
-    className,
-    `logos__logo`,
-    getColorClassName('background-color', backgroundColor.slug),
-  )
+  const backgroundClass = getColorClassName('background-color', backgroundColor.slug)
+
+  const classes = classnames({
+    [backgroundClass]: backgroundClass,
+    [className]: true,
+    'logos__logo': true,
+  })
+
+  const style = {
+    backgroundColor: backgroundClass ? undefined : customBackgroundColor,
+  }
 
   const onDelete = () => {
     dispatch('core/editor').removeBlock(clientId, false)
@@ -83,8 +93,11 @@ const Editor = withColors('backgroundColor')((props) => {
           },
         ]} />
       </BlockControls>
-      <div className={classes}>
-        {'Hi'}
+      <div
+        className={classes}
+        style={style}
+      >
+        <img src={imageUrl} />
       </div>
     </Fragment>
   )

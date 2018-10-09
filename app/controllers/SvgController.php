@@ -34,8 +34,11 @@ class SvgController extends BaseController
         }
 
         if (isset($params['fill']) && !empty($params['fill'])) {
+            // Check if we were passed a hex-style value
+            $fillIsHex = boolval(preg_match('/([a-f0-9]{3}){1,2}\b/i', $params['fill']));
+
             // Can't use a hash mark in a query parameter, so we add it in
-            if (strlen($params['fill']) < 7) {
+            if ($fillIsHex) {
                 $params['fill'] = "#{$params['fill']}";
             }
 

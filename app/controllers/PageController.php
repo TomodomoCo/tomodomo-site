@@ -2,6 +2,8 @@
 
 namespace Tomodomo\Controllers;
 
+use Tomodomo\Models\Page;
+
 class PageController extends BaseController
 {
     /**
@@ -16,6 +18,11 @@ class PageController extends BaseController
      */
     public function get($request, $response, $args)
     {
-        return '';
+        // Context
+        $context = [
+            'post' => new Page(),
+        ];
+
+        return $this->twig->compile('page.twig', $context);
     }
 }

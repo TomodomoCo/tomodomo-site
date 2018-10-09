@@ -1,0 +1,31 @@
+.wp-block-tomodomo-logos {
+  display: flex;
+  flex-direction: column;
+
+  @include breakpoint(30rem) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+  .logos__logo {
+    flex-grow: 1;
+    padding: 4vmax;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include breakpoint(30rem) {
+      width: 50%;
+    }
+
+    @include breakpoint(50rem) {
+      width: 25%;
+    }
+
+    img {
+      max-width: 12em;
+      width: 100%;
+    }
+  }
