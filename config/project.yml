@@ -5,6 +5,7 @@ repo: git://github.com/TomodomoCo/tomodomoco-site.git
 uploads:
   - public/assets
   - public/content/plugins/tomodomo-block-columns/build
+  - public/content/plugins/tomodomo-block-logo-grid/build
 
 # Deploy alerts
 alerts:
