@@ -34,6 +34,16 @@
     margin-top: 0;
     margin-bottom: 0;
   }
+
+  .logo-grid__logo {
+    padding: 2vmax;
+    text-align: center;
+
+    & > svg {
+      width: 100%;
+      max-width: 90%;
+    }
+  }
 }
 
 

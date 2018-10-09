@@ -3,7 +3,7 @@
 {% block content %}
 
     {% for post in posts %}
-	<article class="content" itemscope itemtype="http://schema.org/Article">
+	<article class="content {% if image %}has-featured-image{% endif %}" itemscope itemtype="http://schema.org/Article">
         <header class="content__header">
             <h1 class="content__title"><span>{{post.title}}</span></h1>
 

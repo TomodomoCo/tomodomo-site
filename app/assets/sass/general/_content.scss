@@ -18,9 +18,11 @@ $debug: false;
       margin-left:  $content__title--padding * -1;
       margin-right: $content__title--padding * -1;
 
-      // Pull the featured image up
-      // @todo make sure this works without a feature image
-      margin-bottom: -0.55em;
+      .has-featured-image & {
+        // Pull the featured image up
+        // @todo make sure this works without a feature image
+        margin-bottom: -0.55em;
+      }
 
       font-size: 10vw;
       line-height: 1;

@@ -47,18 +47,6 @@ const Editor = withColors('backgroundColor')((props) => {
     setBackgroundColor,
   } = props
 
-  const backgroundClass = getColorClassName('background-color', backgroundColor.slug)
-
-  const classes = classnames({
-    [backgroundClass]: backgroundClass,
-    [className]: true,
-    'logo-grid__logo': true,
-  })
-
-  const style = {
-    backgroundColor: backgroundClass ? undefined : customBackgroundColor,
-  }
-
   const onDelete = () => {
     dispatch('core/editor').removeBlock(clientId, false)
   }
@@ -95,13 +83,12 @@ const Editor = withColors('backgroundColor')((props) => {
           },
         ]} />
       </BlockControls>
-      <div
-        className={classes}
-        style={style}
-      >
+      <div>
         <ServerSideRender
           block="tomodomo/logo-grid-logo"
           attributes={{
+            'backgroundColor': backgroundColor.slug,
+            customBackgroundColor,
             svgName,
             svgParams,
           }}

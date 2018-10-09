@@ -1,1 +1,2 @@
-<svg baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" width="65" height="44" viewBox="0 0 65 44" {% if classes %}class="{{classes|join(' ')}}"{% endif %}><path fill="{{ fill|default('#FFF') }}" d="M65 8.94V0H0v8.94h13V44h11V8.94h7.06V44H42V28h20V18H42V8.94z"/></svg>
+{% if width is defined %}{% set height = (44/65) * width %}{% endif %}
+<svg baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" width="{{width|default('65')}}" height="{{height|default('44')}}" viewBox="0 0 65 44" {% if classes %}class="{{classes|join(' ')}}"{% endif %}><path fill="{{ fill|default('#FFF') }}" d="M65 8.94V0H0v8.94h13V44h11V8.94h7.06V44H42V28h20V18H42V8.94z"/></svg>
