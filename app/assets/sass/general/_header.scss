@@ -31,10 +31,10 @@
     .logo {
       display: block;
       color: #000;
-      max-width: 50vw;
+      max-width: 40vw;
 
       @include breakpoint(40rem) {
-        max-width: 400px;
+        max-width: 300px;
       }
 
       &:hover {
