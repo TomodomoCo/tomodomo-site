@@ -6,8 +6,8 @@
     }
   },
   "packages": [
-    "public/content/plugins/tomodomo-block-columns",
-    "public/content/plugins/tomodomo-block-logo-grid"
+    "app/plugins/tomodomo-block-logo-grid",
+    "public/content/plugins/tomodomo-block-columns"
   ],
   "lerna": "2.11.0"
 }

@@ -3,9 +3,9 @@ name: tomodomoco
 repo: git://github.com/TomodomoCo/tomodomoco-site.git
 
 uploads:
+  - app/plugins/tomodomo-block-logo-grid/build
   - public/assets
   - public/content/plugins/tomodomo-block-columns/build
-  - public/content/plugins/tomodomo-block-logo-grid/build
 
 # Deploy alerts
 alerts:
