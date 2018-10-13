@@ -33,8 +33,9 @@
   "scripts": {
     "build": "npx gulp --env=production",
     "dev": "npx gulp watch --env=dev",
-    "lerna-install": "npx lerna bootstrap",
+    "lerna-build-install": "npx lerna bootstrap --ci",
     "lerna-build": "npx lerna exec --parallel --bail=false -- npm run build",
+    "lerna-dev-install": "npx lerna bootstrap",
     "lerna-dev": "npx lerna exec --parallel --bail=false -- npm run dev",
     "phpcs": "./vendor/composer/bin/phpcs",
     "psalm": "./vendor/composer/bin/psalm",

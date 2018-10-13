@@ -1,5 +1,6 @@
 build:
-	npm install
+	composer install --ignore-platform-reqs --no-interaction
+	npm ci
 	npm run build
-	npm run lerna-install
+	npm run lerna-build-install
 	npm run lerna-build
