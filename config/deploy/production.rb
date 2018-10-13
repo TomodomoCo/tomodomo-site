@@ -4,11 +4,13 @@ project  = YAML.load_file(fetch(:project_yml_path))
 
 set :app_target, "#{project['stage']['production']['ip']}"
 set :app_user, "#{project['stage']['production']['user']}"
+set :app_port, "#{project['stage']['production']['ports']['ssh']}"
 
 # Server settings
 server "#{fetch(:app_target)}",
   roles: [:app],
   user: "#{fetch(:app_user)}"
+  port: "#{fetch(:app_port)}"
 
 # Stage settings
 set :app_domain, "#{project['stage']['production']['domain']}"
