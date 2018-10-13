@@ -22,16 +22,18 @@ stage:
     user: vagrant
     domain: dev.tomodomo.co
   staging:
-    ip: 0.0.0.0
+    ip: 192.241.190.154
     ports:
       ssh: 22
-    user: deploy
-    branch: master
+    user: staging
+    branch: staging
     domain: staging.tomodomo.co
+    deploy_to: /srv/users/staging/apps/tomodomo-staging/deploy
   production:
-    ip: 0.0.0.0
+    ip: 192.241.190.154
     ports:
       ssh: 22
-    user: deploy
-    branch: master
+    user: production
+    branch: production
     domain: tomodomo.co
+    deploy_to: /srv/users/production/apps/tomodomo-production/deploy
