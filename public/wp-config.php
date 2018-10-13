@@ -67,7 +67,7 @@ if ($_SERVER['SERVER_NAME'] === $project['stage']['dev']['domain']) {
 	 * STAGING
 	 */
 	define('WP_STAGE', 'staging');
-	define('WP_HOME', "http://{$project['stage']['staging']['domain']}");
+	define('WP_HOME', "https://{$project['stage']['staging']['domain']}");
 
 	// Make "private"
 	define('WP_ROBOTS_PUBLIC', 0);
