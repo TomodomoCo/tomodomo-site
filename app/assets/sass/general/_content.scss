@@ -100,6 +100,11 @@ $debug: false;
       }
     }
 
+    // Target only top-level paragraphs
+    .content__body > p {
+      hyphens: auto;
+    }
+
     // wp-block-image should be effectively passthrough
     .content__body > .wp-block-image {
       width: auto;
