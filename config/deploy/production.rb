@@ -9,7 +9,7 @@ set :app_port, "#{project['stage']['production']['ports']['ssh']}"
 # Server settings
 server "#{fetch(:app_target)}",
   roles: [:app],
-  user: "#{fetch(:app_user)}"
+  user: "#{fetch(:app_user)}",
   port: "#{fetch(:app_port)}"
 
 # Stage settings
