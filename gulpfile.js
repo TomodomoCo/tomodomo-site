@@ -7,6 +7,7 @@ const concat         = require('gulp-concat')
 const cssnano        = require('gulp-cssnano')
 const imagemin       = require('gulp-imagemin')
 const mainBowerFiles = require('main-bower-files')
+const minimist       = require('minimist')
 const sass           = require('gulp-sass')
 const sassAssetFuncs = require('node-sass-asset-functions')
 const sassglob       = require('gulp-sass-glob')
@@ -16,6 +17,11 @@ const twig           = require('gulp-twig')
 const twigMarkdown   = require('twig-markdown')
 const uglify         = require('gulp-uglify')
 const webpack        = require('webpack-stream')
+
+var options = minimist(process.argv.slice(2), {
+  string: 'env',
+  default: { env: process.env.NODE_ENV || 'production' },
+});
 
 /**
  * Sass to CSS compilation, minification, and prefixing
@@ -94,8 +100,11 @@ gulp.task('svg', function () {
  * JavaScript compilation
  */
 gulp.task('js', function () {
+  // Grab the config file
+  let webpackConfig = require('./webpack.config.js')
+
   gulp.src('app/assets/js/script.js')
-    .pipe(webpack(require('./webpack.config.js')))
+    .pipe(webpack(webpackConfig[options.env]))
     .pipe(gulp.dest('public/assets/js/'))
 })
 
@@ -103,11 +112,12 @@ gulp.task('js', function () {
  * Watch filesystem for changes
  */
 gulp.task('watcher', function () {
+  const isWatching = true
+
   gulp.watch('app/assets/sass/**/*.scss',   ['css'])
   gulp.watch('app/assets/fonts/**/*',       ['fonts'])
   gulp.watch('app/assets/img/**/*',         ['images'])
   gulp.watch('app/assets/sprites/**/*.svg', ['sprites'])
-  gulp.watch('app/assets/svg/**/*.svg',     ['svg'])
 })
 
 /**
@@ -116,7 +126,6 @@ gulp.task('watcher', function () {
 gulp.task('default', [
   'images',
   'sprites',
-  'svg',
   'js',
   'fonts',
   'css',
@@ -127,5 +136,5 @@ gulp.task('default', [
  */
 gulp.task('watch', [
   'default',
-  'watcher'
+  'watcher',
 ])

@@ -22,6 +22,7 @@
     "gulp-util": "*",
     "lerna": "^2.11.0",
     "main-bower-files": "*",
+    "minimist": "^1.2.0",
     "node-sass-asset-functions": "0.*",
     "resize-observer-polyfill": "^1.5.0",
     "s3": "*",
@@ -30,8 +31,8 @@
     "webpack-stream": "^5.1.1"
   },
   "scripts": {
-    "build": "npx gulp",
-    "dev": "npx gulp watch",
+    "build": "npx gulp --env=production",
+    "dev": "npx gulp watch --env=dev",
     "lerna-install": "npx lerna bootstrap",
     "lerna-build": "npx lerna exec --parallel --bail=false -- npm run build",
     "lerna-dev": "npx lerna exec --parallel --bail=false -- npm run dev",
@@ -39,5 +40,8 @@
     "psalm": "./vendor/composer/bin/psalm",
     "lint-php": "npm run phpcs; npm run psalm",
     "postinstall": "npx bower install"
+  },
+  "dependencies": {
+    "lodash": "^4.17.11"
   }
 }

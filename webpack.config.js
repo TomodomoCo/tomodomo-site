@@ -1,4 +1,7 @@
-const config = {
+const _ = require('lodash')
+
+// Set the defaults
+const defaults = {
   watch: true,
   module: {
     rules: [
@@ -20,10 +23,28 @@ const config = {
   output: {
     filename: 'script.js',
   },
-  stats: {
-    colors: true,
-  },
-  devtool: 'source-map',
-};
+}
+
+// Build the whole config
+const config = {
+  dev: _.defaults(
+    {
+      mode: 'development',
+      watch: true,
+      stats: {
+        colors: true,
+      },
+      devtool: 'source-map',
+    },
+    defaults
+  ),
+  production: _.defaults(
+    {
+      mode: 'production',
+      watch: false,
+    },
+    defaults
+  ),
+}
 
 module.exports = config
