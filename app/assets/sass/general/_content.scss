@@ -100,17 +100,6 @@ $debug: false;
       }
     }
 
-    // Target only top-level paragraphs
-    .content__body > p {
-      hyphens: auto;
-    }
-
-    // wp-block-image should be effectively passthrough
-    .content__body > .wp-block-image {
-      width: auto;
-      margin: 0;
-    }
-
 
     // Width alignments
     .content__body .alignfull,
@@ -180,5 +169,28 @@ $debug: false;
 
       @include breakpoint(960px) {
         width: calc(50% - #{$space * 2});
+      }
+    }
+
+    /**
+     * Block exceptions
+     */
+
+    // Target only top-level paragraphs
+    .content__body > p {
+      hyphens: auto;
+    }
+
+    // wp-block-image should be effectively passthrough
+    .content__body > .wp-block-image {
+      width: auto;
+      margin: 0;
+    }
+
+    // Make sure columns stretch to account for inner padding
+    .content__body > .wp-block-tomodomo-columns {
+      &.alignfull {
+        width: 100%;
+        margin: 0;
       }
     }
