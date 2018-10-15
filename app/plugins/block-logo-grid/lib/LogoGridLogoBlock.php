@@ -42,21 +42,21 @@ class LogoGridLogoBlock
 
         // Register the block
         register_block_type('tomodomo/logo-grid-logo', [
-			'attributes' => [
+            'attributes' => [
                 'backgroundColor' => [
-					'type' => 'string',
+                    'type' => 'string',
                 ],
                 'customBackgroundColor' => [
-					'type' => 'string',
+                    'type' => 'string',
                 ],
-				'svgName' => [
-					'type'    => 'string',
-					'default' => '',
-				],
-				'svgParams' => [
-					'type'    => 'string',
-					'default' => '',
-				],
+                'svgName' => [
+                    'type'    => 'string',
+                    'default' => '',
+                ],
+                'svgParams' => [
+                    'type'    => 'string',
+                    'default' => '',
+                ],
             ],
             'render_callback' => [$this, 'render'],
         ]);
@@ -93,29 +93,35 @@ class LogoGridLogoBlock
         // SVG file name
         $svg = esc_attr($attributes['svgName']);
 
+        // Return empty HTML comments if the SVG does not exist
         if (!$this->loader->exists($svg)) {
             return '<!-- -->';
         }
 
-        // Get the args
+        // Parse out the args
         parse_str($attributes['svgParams'], $params);
         $svgArgs = Svg::getArgsFromParams($params);
 
         // Render the SVG
         $svg = $twig->render($svg, $svgArgs);
 
-
         // Define custom style attribute
-        $attr = empty($attributes['customBackgroundColor']) ? '' : 'style="background-color: ' . $attributes['customBackgroundColor'] . ';"';
+        $attr = empty($attributes['customBackgroundColor'])
+            ? ""
+            : "style=\"background: {$attributes['customBackgroundColor']};\"";
 
         // Define classnames
         $classes[] = "logo-grid__logo";
-        $classes[] = empty($attributes['backgroundColor']) ? '' : "has-{$attributes['backgroundColor']}-background-color";
+        $classes[] = empty($attributes['backgroundColor'])
+            ? ""
+            : "has-{$attributes['backgroundColor']}-background-color";
 
-        // Add the class
-        $attr .= ' class="' . implode($classes, ' ') . '"';
+        // Filter empty class names and string them together
+        $classes = implode(array_filter($classes), ' ');
+
+        // Add the class attribute
+        $attr .= " class=\"{$classes}\"";
 
         return sprintf('<div %s>%s</div>', $attr, $svg);
     }
 }
-
