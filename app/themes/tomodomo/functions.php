@@ -57,6 +57,10 @@ function context($context)
     $context['menu']['primary'] = new Menu('primary');
     $context['menu']['footer']  = new Menu('footer');
 
+    if ($hash = file_get_contents(sprintf(ABSPATH . '../../.git/refs/heads/%s', WP_STAGE))) {
+        $context['commit'] = $hash;
+    }
+
     return $context;
 }
 

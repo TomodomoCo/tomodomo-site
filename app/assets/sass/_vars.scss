@@ -1,9 +1,13 @@
-// Font settings
-
-$font__family: 'BT Revival 565 W01', 'Georgia', 'Timews New Roman', Times, serif;
-$font__family--alt: 'Lekton-Tomodomo', monospace;
+// Generic font types
+$font__family--serif: 'BT Revival 565 W01', 'Georgia', 'Timews New Roman', Times, serif;
+$font__family--monospace: 'Lekton-Tomodomo', monospace;
 $font__family--native: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-$font__family--heading: 'Neue Plak™ W01', $font__family--native;
+$font__family--sans-serif: 'Neue Plak™ W01', $font__family--native;
+
+// Semantic font types
+$font__family:          $font__family--serif;
+$font__family--alt:     $font__family--monospace;
+$font__family--heading: $font__family--sans-serif;
 
 // Spacing
 $space: 1rem;

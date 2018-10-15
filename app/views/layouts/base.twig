@@ -4,11 +4,14 @@
 <body id="top">
     {% include 'partials/_header.twig' %}
 
-    <main class="body">
-        {% block content %}{% endblock %}
-    </main>
+    <div class="body">
+        <main class="main">
+            {% block content %}{% endblock %}
+        </main>
 
-    {% include 'partials/_footer.twig' %}
+        {% include 'partials/_footer.twig' %}
+    </div>
+
     {{wp_footer}}
 </body>
 </html>

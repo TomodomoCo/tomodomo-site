@@ -31,7 +31,7 @@ a {
 	&:hover {
 		border-bottom-width: 0.15em;
 		border-bottom-style: solid;
-		border-bottom-color: lighten($color__link, 20%);
+		border-bottom-color: currentcolor;
 	}
 }
 
