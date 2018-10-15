@@ -2,6 +2,7 @@
 
 namespace Tomodomo\Theme;
 
+use Tomodomo\Helpers\Git;
 use Tomodomo\Models\Menu;
 use Tomodomo\WpAssetRegistrar\Registrar;
 use function Stringy\create as s;
@@ -11,8 +12,7 @@ use function Stringy\create as s;
  *
  * @return void
  */
-function themeSupports()
-{
+add_action('after_setup_theme', function () {
     // Featured images
     add_theme_support('post-thumbnails');
     add_theme_support('disable-custom-font-sizes');
@@ -24,26 +24,21 @@ function themeSupports()
     add_theme_support('title-tag');
 
     return;
-}
-
-add_action('after_setup_theme', __NAMESPACE__ . '\\themeSupports');
+});
 
 /**
  * Register theme nav menus
  *
  * @return void
  */
-function registerMenus()
-{
+add_action('init', function () {
     register_nav_menus([
         'primary' => 'Primary Menu',
         'footer'  => 'Footer Menu',
     ]);
 
     return;
-}
-
-add_action('init', __NAMESPACE__ . '\\registerMenus');
+});
 
 /**
  * Add items to Timber context to access on views
@@ -52,25 +47,20 @@ add_action('init', __NAMESPACE__ . '\\registerMenus');
  *
  * @return array
  */
-function context($context)
-{
+add_filter('timber/context', function ($context) {
     // Load in menus
     $context['menu']['primary'] = new Menu('primary');
     $context['menu']['footer']  = new Menu('footer');
 
-    // Try two approaches to getting the commit hash
-    if (is_readable(ABSPATH . '../../REVISION')) {
-        $context['commit'] = file_get_contents(ABSPATH . '../../REVISION');
-    } else if (is_readable(sprintf(ABSPATH . '../../.git/refs/heads/%s', WP_STAGE))) {
-        $context['commit'] = file_get_contents(sprintf(ABSPATH . '../../.git/refs/heads/%s', WP_STAGE));
-    }
+    // Get the active commit hash
+    $context['commit'] = Git::getCurrentCommitHash();
 
     return $context;
-}
+});
 
-add_filter('timber/context', __NAMESPACE__ . '\\context');
-
-// Register virtual page templates for Kaiso
+/**
+ * Register virtual page templates for Kaiso
+ */
 \Tomodomo\Kaiso::registerTemplates([
     [
         'slug' => 'canvas',
@@ -119,7 +109,8 @@ add_action('wp_enqueue_block_editor_assets', function () use ($registrar) {
  *
  * @return string
  */
-function relativeAssetUrl($input) {
+function relativeAssetUrl($input)
+{
     if (is_admin()) {
         return $input;
     }
@@ -135,4 +126,4 @@ function relativeAssetUrl($input) {
 }
 
 add_filter('script_loader_src', __NAMESPACE__ . '\\relativeAssetUrl');
-add_filter('style_loader_src',  __NAMESPACE__ . '\\relativeAssetUrl');
+add_filter('style_loader_src', __NAMESPACE__ . '\\relativeAssetUrl');
