@@ -15,6 +15,7 @@ function themeSupports()
 {
     // Featured images
     add_theme_support('post-thumbnails');
+    add_theme_support('disable-custom-font-sizes');
 
     // Gutenberg wide alignment
     add_theme_support('align-wide');
@@ -57,8 +58,11 @@ function context($context)
     $context['menu']['primary'] = new Menu('primary');
     $context['menu']['footer']  = new Menu('footer');
 
-    if ($hash = file_get_contents(sprintf(ABSPATH . '../../.git/refs/heads/%s', WP_STAGE))) {
-        $context['commit'] = $hash;
+    // Try two approaches to getting the commit hash
+    if (is_readable(ABSPATH . '../../REVISION')) {
+        $context['commit'] = file_get_contents(ABSPATH . '../../REVISION');
+    } else if (is_readable(sprintf(ABSPATH . '../../.git/refs/heads/%s', WP_STAGE))) {
+        $context['commit'] = file_get_contents(sprintf(ABSPATH . '../../.git/refs/heads/%s', WP_STAGE));
     }
 
     return $context;
