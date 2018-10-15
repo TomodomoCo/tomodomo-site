@@ -11,6 +11,7 @@
     <arg name="tab-width" value="4" />
     <arg value="-colors" />
     <arg value="p" />
+    <arg name="extensions" value="php" />
 
     <rule ref="PSR2" />
 
