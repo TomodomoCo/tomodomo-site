@@ -47,7 +47,7 @@ add_action('init', function () {
  *
  * @return array
  */
-add_filter('timber/context', function ($context) {
+add_filter('timber/context', function (array $context) {
     // Load in menus
     $context['menu']['primary'] = new Menu('primary');
     $context['menu']['footer']  = new Menu('footer');
@@ -105,9 +105,9 @@ add_action('wp_enqueue_block_editor_assets', function () use ($registrar) {
 /**
  * Make an asset URL relative
  *
- * @param string $input
+ * @param string|null $input
  *
- * @return string
+ * @return string|null
  */
 function relativeAssetUrl($input)
 {

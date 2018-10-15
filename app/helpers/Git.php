@@ -9,7 +9,7 @@ class Git
      *
      * @return string|null
      */
-    public function getCurrentCommitHash()
+    public static function getCurrentCommitHash()
     {
         // Path to Capistrano's REVISION file
         $revisionFilePath = ABSPATH . '../../REVISION';

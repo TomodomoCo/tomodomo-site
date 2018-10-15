@@ -11,9 +11,12 @@
     <directory name="app/models" />
     <directory name="app/plugins" />
     <directory name="app/themes" />
+    <file name="public/index.php" />
 
     <ignoreFiles>
       <directory name="vendor" />
+      <directory name="public/wp" />
+      <file name="app/middlewares/WpMiddleware.php" />
     </ignoreFiles>
   </projectFiles>
 
@@ -31,7 +34,6 @@
     <DeprecatedClass errorLevel="info" />
     <DeprecatedInterface errorLevel="info" />
 
-    <MissingClosureReturnType errorLevel="info" />
     <MissingReturnType errorLevel="info" />
     <MissingPropertyType errorLevel="info" />
     <InvalidDocblock errorLevel="info" />
