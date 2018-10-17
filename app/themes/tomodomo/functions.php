@@ -15,7 +15,6 @@ use function Stringy\create as s;
 add_action('after_setup_theme', function () {
     // Featured images
     add_theme_support('post-thumbnails');
-    add_theme_support('disable-custom-font-sizes');
 
     // Gutenberg wide alignment
     add_theme_support('align-wide');
