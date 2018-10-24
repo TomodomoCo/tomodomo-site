@@ -5,16 +5,15 @@ const gulp           = require('gulp')
 const gutil          = require('gulp-util')
 const concat         = require('gulp-concat')
 const cssnano        = require('gulp-cssnano')
+const eyeglass       = require('eyeglass')
 const imagemin       = require('gulp-imagemin')
-const mainBowerFiles = require('main-bower-files')
 const minimist       = require('minimist')
 const sass           = require('gulp-sass')
 const sassAssetFuncs = require('node-sass-asset-functions')
 const sassglob       = require('gulp-sass-glob')
+const sourcemaps     = require('gulp-sourcemaps')
 const svgo           = require('gulp-svgo')
 const svgSprite      = require('gulp-svg-sprite')
-const twig           = require('gulp-twig')
-const twigMarkdown   = require('twig-markdown')
 const uglify         = require('gulp-uglify')
 const webpack        = require('webpack-stream')
 
@@ -26,21 +25,23 @@ var options = minimist(process.argv.slice(2), {
 /**
  * Sass to CSS compilation, minification, and prefixing
  */
-gulp.task('css', function() {
+gulp.task('css', () => {
+  const options = {
+    functions: sassAssetFuncs({
+      'images_path':      'public/assets/img/',
+      'http_images_path': '/assets/img/',
+      'fonts_path':       'public/assets/fonts/',
+      'http_fonts_path':  '/assets/fonts/',
+    }),
+    includePaths: [
+      './node_modules',
+    ],
+  }
+
   gulp.src('app/assets/sass/*.scss')
     .pipe(sassglob())
-    .pipe(sass({
-      functions: sassAssetFuncs({
-        'images_path':      'public/assets/img/',
-        'http_images_path': '/assets/img/',
-        'fonts_path':       'public/assets/fonts/',
-        'http_fonts_path':  '/assets/fonts/',
-      }),
-      includePaths: [
-        './vendor/bower_components',
-        './vendor/bower_components/breakpoint-sass/stylesheets',
-      ],
-    }).on('error', sass.logError))
+    .pipe(sourcemaps.init())
+    .pipe(sass(eyeglass(options)).on('error', sass.logError))
     .pipe(cssnano({
       autoprefixer: {
         browsers: ['last 2 versions'],
@@ -51,13 +52,14 @@ gulp.task('css', function() {
       },
       zindex: false,
     }))
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest('public/assets/css/'))
 })
 
 /**
  * Font placement
  */
-gulp.task('fonts', function () {
+gulp.task('fonts', () => {
   gulp.src('app/assets/fonts/**/*')
     .pipe(gulp.dest('public/assets/fonts/'))
 })
@@ -65,7 +67,7 @@ gulp.task('fonts', function () {
 /**
  * Image minification
  */
-gulp.task('images', function () {
+gulp.task('images', () => {
   gulp.src('app/assets/img/**/*')
     .pipe(imagemin({
       progressive: true,
@@ -77,7 +79,7 @@ gulp.task('images', function () {
 /**
  * Spritify SVGs
  */
-gulp.task('sprites', function () {
+gulp.task('sprites', () => {
   gulp.src('app/assets/sprites/**/*.svg')
     .pipe(svgSprite({
       mode: {
@@ -90,7 +92,7 @@ gulp.task('sprites', function () {
 /**
  * Handle normal SVGs
  */
-gulp.task('svg', function () {
+gulp.task('svg', () => {
   gulp.src('app/assets/svg/**/*.svg')
     .pipe(svgo())
     .pipe(gulp.dest('public/assets/img'))
@@ -99,7 +101,7 @@ gulp.task('svg', function () {
 /**
  * JavaScript compilation
  */
-gulp.task('js', function () {
+gulp.task('js', () => {
   // Grab the config file
   let webpackConfig = require('./webpack.config.js')
 
@@ -111,7 +113,7 @@ gulp.task('js', function () {
 /**
  * Watch filesystem for changes
  */
-gulp.task('watcher', function () {
+gulp.task('watcher', () => {
   const isWatching = true
 
   gulp.watch('app/assets/sass/**/*.scss',   ['css'])
