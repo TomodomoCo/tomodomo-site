@@ -29,11 +29,6 @@ var options = minimist(process.argv.slice(2), {
  */
 gulp.task('css', () => {
   const options = {
-    eyeglass: {
-      modules: [
-        { path: '' },
-      ],
-    },
     functions: sassAssetFuncs({
       'images_path':      'public/assets/img/',
       'http_images_path': '/assets/img/',
@@ -41,8 +36,7 @@ gulp.task('css', () => {
       'http_fonts_path':  '/assets/fonts/',
     }),
     includePaths: [
-      './vendor/bower_components',
-      './vendor/bower_components/breakpoint-sass/stylesheets',
+      './node_modules',
     ],
   }
 
