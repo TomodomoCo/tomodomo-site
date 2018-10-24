@@ -25,16 +25,6 @@ body {
 	font-variant-numeric: lining-nums;
 }
 
-a {
-	color: $color__link;
-
-	&:hover {
-		border-bottom-width: 0.15em;
-		border-bottom-style: solid;
-		border-bottom-color: currentcolor;
-	}
-}
-
 .body {
   max-width: 60rem;
   margin-left: auto;
@@ -47,4 +37,19 @@ a {
     padding-left:  $space * 2;
     padding-right: $space * 2;
   }
+}
+
+a {
+	color: $color__link;
+  text-decoration: none;
+
+	&:hover {
+		border-bottom-width: 0.15em;
+		border-bottom-style: solid;
+		border-bottom-color: currentcolor;
+	}
+}
+
+hr {
+  border: 0;
 }

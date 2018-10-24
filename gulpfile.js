@@ -7,15 +7,13 @@ const concat         = require('gulp-concat')
 const cssnano        = require('gulp-cssnano')
 const eyeglass       = require('eyeglass')
 const imagemin       = require('gulp-imagemin')
-const mainBowerFiles = require('main-bower-files')
 const minimist       = require('minimist')
 const sass           = require('gulp-sass')
 const sassAssetFuncs = require('node-sass-asset-functions')
 const sassglob       = require('gulp-sass-glob')
+const sourcemaps     = require('gulp-sourcemaps')
 const svgo           = require('gulp-svgo')
 const svgSprite      = require('gulp-svg-sprite')
-const twig           = require('gulp-twig')
-const twigMarkdown   = require('twig-markdown')
 const uglify         = require('gulp-uglify')
 const webpack        = require('webpack-stream')
 
@@ -42,6 +40,7 @@ gulp.task('css', () => {
 
   gulp.src('app/assets/sass/*.scss')
     .pipe(sassglob())
+    .pipe(sourcemaps.init())
     .pipe(sass(eyeglass(options)).on('error', sass.logError))
     .pipe(cssnano({
       autoprefixer: {
@@ -53,6 +52,7 @@ gulp.task('css', () => {
       },
       zindex: false,
     }))
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest('public/assets/css/'))
 })
 
