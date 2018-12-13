@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "8bedca707869ec77350959b44964b4a4",
+    "content-hash": "a5920783fc642b4d236c67f7d3f0640e",
     "packages": [
         {
             "name": "altorouter/altorouter",
@@ -1563,15 +1563,15 @@
         },
         {
             "name": "wpackagist-plugin/gutenberg",
-            "version": "3.9.1",
+            "version": "4.7.0",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/gutenberg/",
-                "reference": "tags/3.9.1"
+                "reference": "tags/4.7.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/gutenberg.3.9.1.zip",
+                "url": "https://downloads.wordpress.org/plugin/gutenberg.4.7.0.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -1583,15 +1583,15 @@
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
-            "version": "8.4",
+            "version": "9.2.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
-                "reference": "tags/8.4"
+                "reference": "tags/9.2.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.8.4.zip",
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.9.2.1.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -2829,15 +2829,15 @@
         },
         {
             "name": "wpackagist-plugin/debug-bar",
-            "version": "0.9",
+            "version": "1.0",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/debug-bar/",
-                "reference": "tags/0.9"
+                "reference": "tags/1.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/debug-bar.0.9.zip",
+                "url": "https://downloads.wordpress.org/plugin/debug-bar.1.0.zip",
                 "reference": null,
                 "shasum": null
             },
