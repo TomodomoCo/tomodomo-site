@@ -1232,12 +1232,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/TomodomoCo/gutenberg-block-columns.git",
-                "reference": "79a768012f360298f92a4871897398f51f336340"
+                "reference": "72a121465d37c0b82aaa24d2cf4cfade0aaf8f9a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TomodomoCo/gutenberg-block-columns/zipball/79a768012f360298f92a4871897398f51f336340",
-                "reference": "79a768012f360298f92a4871897398f51f336340",
+                "url": "https://api.github.com/repos/TomodomoCo/gutenberg-block-columns/zipball/72a121465d37c0b82aaa24d2cf4cfade0aaf8f9a",
+                "reference": "72a121465d37c0b82aaa24d2cf4cfade0aaf8f9a",
                 "shasum": ""
             },
             "require": {
@@ -1269,7 +1269,7 @@
                 "source": "https://github.com/TomodomoCo/gutenberg-block-columns/tree/master",
                 "issues": "https://github.com/TomodomoCo/gutenberg-block-columns/issues"
             },
-            "time": "2018-10-09T22:49:34+00:00"
+            "time": "2018-12-13T21:47:31+00:00"
         },
         {
             "name": "tomodomo/block-logo-grid",

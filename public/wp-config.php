@@ -110,6 +110,7 @@ define('WP_CONTENT_URL', WP_HOME . '/content');
 if (WP_DEBUG === true) {
 	ini_set('display_errors', '1');
 	define('WP_DEBUG_DISPLAY', true);
+    define('SCRIPT_DEBUG', true);
 } else {
 	ini_set('display_errors', '0');
 	define('WP_DEBUG_DISPLAY', false);
