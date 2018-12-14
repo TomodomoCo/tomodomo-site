@@ -8,11 +8,10 @@ if (!class_exists('Composer\\Autoload\\ClassLoader')) {
 }
 
 // Setup the YAML parser, load some yaml files
-use Symfony\Component\Yaml\Parser;
+use Symfony\Component\Yaml\Yaml;
 
-$yaml     = new Parser();
-$project  = $yaml->parse(file_get_contents("{$dir}/../config/project.yml"));
-$database = $yaml->parse(file_get_contents("{$dir}/../config/secrets/database.yml"));
+$project  = Yaml::parseFile("{$dir}/../config/project.yml");
+$database = Yaml::parseFile("{$dir}/../config/secrets/database.yml");
 
 // Throw an error if things break
 $failure_message = <<<EOT

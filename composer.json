@@ -68,7 +68,7 @@
   },
   "require": {
     "php": "^7.1",
-    "symfony/yaml": "~2.0",
+    "symfony/yaml": "^4.0",
     "johnpbloch/wordpress": "^5.0",
     "wpackagist-plugin/gutenberg": "^4.0",
     "timber/timber": "^1.7",
