@@ -1,7 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
     "content-hash": "830811e3c2f5aed689466b14c6dbd815",
@@ -866,9 +866,7 @@
             "version": "2.3.4.1",
             "dist": {
                 "type": "zip",
-                "url": "https://s3.amazonaws.com/uploads.packages.vanpattenmedia.com/uploads/2015/01/gravityforms_2.3.4.1.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://s3.amazonaws.com/uploads.packages.vanpattenmedia.com/uploads/2015/01/gravityforms_2.3.4.1.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -1286,8 +1284,7 @@
             "dist": {
                 "type": "path",
                 "url": "./app/plugins/block-logo-grid",
-                "reference": "92272a4d8d8e3f42c0185a5a85de0928c35f7049",
-                "shasum": null
+                "reference": "92272a4d8d8e3f42c0185a5a85de0928c35f7049"
             },
             "require": {
                 "php": "^7.0",
@@ -1321,12 +1318,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/TomodomoCo/kaiso.git",
-                "reference": "bff371adaa9cd61527538b3784f7d1c5345e64e3"
+                "reference": "25bab8dd6c932f21dc10fb73673ee9d789445437"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TomodomoCo/kaiso/zipball/bff371adaa9cd61527538b3784f7d1c5345e64e3",
-                "reference": "bff371adaa9cd61527538b3784f7d1c5345e64e3",
+                "url": "https://api.github.com/repos/TomodomoCo/kaiso/zipball/25bab8dd6c932f21dc10fb73673ee9d789445437",
+                "reference": "25bab8dd6c932f21dc10fb73673ee9d789445437",
                 "shasum": ""
             },
             "require": {
@@ -1361,7 +1358,7 @@
                 "source": "https://github.com/TomodomoCo/kaiso/tree/master",
                 "issues": "https://github.com/TomodomoCo/kaiso/issues"
             },
-            "time": "2018-11-13T13:14:19+00:00"
+            "time": "2019-03-15T19:41:44+00:00"
         },
         {
             "name": "tomodomo/theme",
@@ -1369,8 +1366,7 @@
             "dist": {
                 "type": "path",
                 "url": "./app/themes/tomodomo",
-                "reference": "cda338832f5536bc071e3ddb8133fca99d2d7d04",
-                "shasum": null
+                "reference": "cda338832f5536bc071e3ddb8133fca99d2d7d04"
             },
             "require": {
                 "php": "^7.0"
@@ -1560,9 +1556,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/co-authors-plus.3.3.1.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/co-authors-plus.3.3.1.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -1580,9 +1574,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/gutenberg.4.7.0.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/gutenberg.4.7.0.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -1600,9 +1592,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.9.2.1.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.9.2.1.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -2827,9 +2817,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/better-search-replace.zip?timestamp=1515009188",
-                "reference": null,
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/better-search-replace.zip?timestamp=1515009188"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -2847,9 +2835,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/debug-bar.1.0.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/debug-bar.1.0.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -2867,9 +2853,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/debug-bar-timber.0.3.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/debug-bar-timber.0.3.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -2887,9 +2871,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/query-monitor.3.2.1.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/query-monitor.3.2.1.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -2899,17 +2881,15 @@
         },
         {
             "name": "wpackagist-plugin/wp-mail-logging",
-            "version": "1.8.5",
+            "version": "1.9.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wp-mail-logging/",
-                "reference": "tags/1.8.5"
+                "reference": "tags/1.9.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-mail-logging.1.8.5.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/wp-mail-logging.1.9.1.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
