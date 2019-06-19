@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ced7d90829b41f7896449a7a7286b357",
+    "content-hash": "a099866ab65b3bb44f307fbc43b87862",
     "packages": [
         {
             "name": "altorouter/altorouter",
@@ -446,7 +446,7 @@
             "version": "1.3.8",
             "source": {
                 "type": "git",
-                "url": "https://github.com/ibericode/html-forms.git",
+                "url": "git@github.com:ibericode/html-forms.git",
                 "reference": "59d51a8da02fe18b722f9ed0300f055310c371f4"
             },
             "dist": {
@@ -492,10 +492,6 @@
                 "form",
                 "wordpress"
             ],
-            "support": {
-                "source": "https://github.com/ibericode/html-forms/tree/1.3.8",
-                "issues": "https://github.com/ibericode/html-forms/issues"
-            },
             "time": "2019-05-28T09:44:12+00:00"
         },
         {
@@ -1238,12 +1234,12 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/TomodomoCo/gutenberg-block-columns.git",
+                "url": "git@github.com:tomodomoco/gutenberg-block-columns.git",
                 "reference": "72a121465d37c0b82aaa24d2cf4cfade0aaf8f9a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TomodomoCo/gutenberg-block-columns/zipball/72a121465d37c0b82aaa24d2cf4cfade0aaf8f9a",
+                "url": "https://api.github.com/repos/tomodomoco/gutenberg-block-columns/zipball/72a121465d37c0b82aaa24d2cf4cfade0aaf8f9a",
                 "reference": "72a121465d37c0b82aaa24d2cf4cfade0aaf8f9a",
                 "shasum": ""
             },
@@ -1272,10 +1268,6 @@
                 }
             ],
             "description": "Variable-width columns block for Gutenberg",
-            "support": {
-                "source": "https://github.com/TomodomoCo/gutenberg-block-columns/tree/master",
-                "issues": "https://github.com/TomodomoCo/gutenberg-block-columns/issues"
-            },
             "time": "2018-12-13T21:47:31+00:00"
         },
         {
@@ -1317,12 +1309,12 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/TomodomoCo/kaiso.git",
+                "url": "git@github.com:tomodomoco/kaiso.git",
                 "reference": "25bab8dd6c932f21dc10fb73673ee9d789445437"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TomodomoCo/kaiso/zipball/25bab8dd6c932f21dc10fb73673ee9d789445437",
+                "url": "https://api.github.com/repos/tomodomoco/kaiso/zipball/25bab8dd6c932f21dc10fb73673ee9d789445437",
                 "reference": "25bab8dd6c932f21dc10fb73673ee9d789445437",
                 "shasum": ""
             },
@@ -1354,10 +1346,6 @@
                 }
             ],
             "description": "Template hierarchy-powered pseudo-framework in WordPress",
-            "support": {
-                "source": "https://github.com/TomodomoCo/kaiso/tree/master",
-                "issues": "https://github.com/TomodomoCo/kaiso/issues"
-            },
             "time": "2019-03-15T19:41:44+00:00"
         },
         {
@@ -1391,12 +1379,12 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/TomodomoCo/wp-asset-registrar.git",
+                "url": "git@github.com:tomodomoco/wp-asset-registrar.git",
                 "reference": "8462ef0c43c842ffe8bfc4cb77ea2467be73ca0e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TomodomoCo/wp-asset-registrar/zipball/8462ef0c43c842ffe8bfc4cb77ea2467be73ca0e",
+                "url": "https://api.github.com/repos/tomodomoco/wp-asset-registrar/zipball/8462ef0c43c842ffe8bfc4cb77ea2467be73ca0e",
                 "reference": "8462ef0c43c842ffe8bfc4cb77ea2467be73ca0e",
                 "shasum": ""
             },
@@ -1422,10 +1410,6 @@
                 }
             ],
             "description": "Object-oriented registration of CSS and JS assets for WordPress",
-            "support": {
-                "source": "https://github.com/TomodomoCo/wp-asset-registrar/tree/master",
-                "issues": "https://github.com/TomodomoCo/wp-asset-registrar/issues"
-            },
             "time": "2018-11-13T13:57:03+00:00"
         },
         {
@@ -1802,21 +1786,23 @@
         },
         {
             "name": "giacocorsiglia/wordpress-stubs",
-            "version": "v4.9.8",
+            "version": "v5.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GiacoCorsiglia/wordpress-stubs.git",
-                "reference": "7c4da67ab3525b2d42b67fdf7174bd27c29a134b"
+                "reference": "1c6f011f5c241bab7293315d7fb7fca27fe79473"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GiacoCorsiglia/wordpress-stubs/zipball/7c4da67ab3525b2d42b67fdf7174bd27c29a134b",
-                "reference": "7c4da67ab3525b2d42b67fdf7174bd27c29a134b",
+                "url": "https://api.github.com/repos/GiacoCorsiglia/wordpress-stubs/zipball/1c6f011f5c241bab7293315d7fb7fca27fe79473",
+                "reference": "1c6f011f5c241bab7293315d7fb7fca27fe79473",
                 "shasum": ""
             },
             "require-dev": {
+                "ext-gettext": "*",
                 "giacocorsiglia/stubs-generator": "^0.5.0",
-                "johnpbloch/wordpress": "4.9.8"
+                "johnpbloch/wordpress": "5.1.1",
+                "php": "^7.1"
             },
             "type": "library",
             "notification-url": "https://packagist.org/downloads/",
@@ -1835,7 +1821,7 @@
                 "static analysis",
                 "wordpress"
             ],
-            "time": "2018-08-26T16:22:59+00:00"
+            "time": "2019-03-13T21:16:05+00:00"
         },
         {
             "name": "muglug/package-versions-56",
