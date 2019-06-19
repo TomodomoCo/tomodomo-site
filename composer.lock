@@ -443,16 +443,16 @@
         },
         {
             "name": "ibericode/html-forms",
-            "version": "1.3.2",
+            "version": "1.3.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ibericode/html-forms.git",
-                "reference": "16f590817cfe34d4d92ce6f71bde1b666d2c2c1a"
+                "reference": "59d51a8da02fe18b722f9ed0300f055310c371f4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ibericode/html-forms/zipball/16f590817cfe34d4d92ce6f71bde1b666d2c2c1a",
-                "reference": "16f590817cfe34d4d92ce6f71bde1b666d2c2c1a",
+                "url": "https://api.github.com/repos/ibericode/html-forms/zipball/59d51a8da02fe18b722f9ed0300f055310c371f4",
+                "reference": "59d51a8da02fe18b722f9ed0300f055310c371f4",
                 "shasum": ""
             },
             "require": {
@@ -493,10 +493,10 @@
                 "wordpress"
             ],
             "support": {
-                "source": "https://github.com/ibericode/html-forms/tree/1.3.2",
+                "source": "https://github.com/ibericode/html-forms/tree/1.3.8",
                 "issues": "https://github.com/ibericode/html-forms/issues"
             },
-            "time": "2018-08-06T14:29:53+00:00"
+            "time": "2019-05-28T09:44:12+00:00"
         },
         {
             "name": "johnpbloch/wordpress",
