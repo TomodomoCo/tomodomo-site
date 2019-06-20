@@ -97,7 +97,7 @@
     "wpackagist-plugin/query-monitor": "^3.0",
     "wpackagist-plugin/wp-mail-logging": "^1.8.3",
     "vimeo/psalm": "^2.0",
-    "giacocorsiglia/wordpress-stubs": "^4.9"
+    "giacocorsiglia/wordpress-stubs": "^5.1"
   },
   "extra": {
     "wordpress-install-dir": "public/wp",
