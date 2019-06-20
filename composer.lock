@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "816b79eb16c4588b2d827f9a77177dd8",
+    "content-hash": "5bb6e24a7183242be93831139d01054d",
     "packages": [
         {
             "name": "altorouter/altorouter",
@@ -1566,15 +1566,15 @@
         },
         {
             "name": "wpackagist-plugin/gutenberg",
-            "version": "4.7.0",
+            "version": "5.9.2",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/gutenberg/",
-                "reference": "tags/4.7.0"
+                "reference": "tags/5.9.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/gutenberg.4.7.0.zip"
+                "url": "https://downloads.wordpress.org/plugin/gutenberg.5.9.2.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
