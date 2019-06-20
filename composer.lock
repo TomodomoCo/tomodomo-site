@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "816b79eb16c4588b2d827f9a77177dd8",
+    "content-hash": "0e5a774763db7f82e8f1d5b39e8c50d5",
     "packages": [
         {
             "name": "altorouter/altorouter",
@@ -1802,21 +1802,23 @@
         },
         {
             "name": "giacocorsiglia/wordpress-stubs",
-            "version": "v4.9.8",
+            "version": "v5.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GiacoCorsiglia/wordpress-stubs.git",
-                "reference": "7c4da67ab3525b2d42b67fdf7174bd27c29a134b"
+                "reference": "1c6f011f5c241bab7293315d7fb7fca27fe79473"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GiacoCorsiglia/wordpress-stubs/zipball/7c4da67ab3525b2d42b67fdf7174bd27c29a134b",
-                "reference": "7c4da67ab3525b2d42b67fdf7174bd27c29a134b",
+                "url": "https://api.github.com/repos/GiacoCorsiglia/wordpress-stubs/zipball/1c6f011f5c241bab7293315d7fb7fca27fe79473",
+                "reference": "1c6f011f5c241bab7293315d7fb7fca27fe79473",
                 "shasum": ""
             },
             "require-dev": {
+                "ext-gettext": "*",
                 "giacocorsiglia/stubs-generator": "^0.5.0",
-                "johnpbloch/wordpress": "4.9.8"
+                "johnpbloch/wordpress": "5.1.1",
+                "php": "^7.1"
             },
             "type": "library",
             "notification-url": "https://packagist.org/downloads/",
@@ -1835,7 +1837,7 @@
                 "static analysis",
                 "wordpress"
             ],
-            "time": "2018-08-26T16:22:59+00:00"
+            "time": "2019-03-13T21:16:05+00:00"
         },
         {
             "name": "muglug/package-versions-56",
