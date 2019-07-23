@@ -72,7 +72,7 @@
     "johnpbloch/wordpress": "^5.0",
     "wpackagist-plugin/gutenberg": "^4.0",
     "timber/timber": "^1.7",
-    "wpackagist-plugin/wordpress-seo": "^9.0",
+    "wpackagist-plugin/wordpress-seo": "^11.7",
     "wpackagist-plugin/co-authors-plus": "^3.3",
     "tomodomo/kaiso": "dev-master",
     "tomodomo/block-columns": "dev-master",
